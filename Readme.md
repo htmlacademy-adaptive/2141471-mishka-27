@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Наиль Марков](https://up.htmlacademy.ru/adaptive/27/user/2141471).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Ефимов](https://htmlacademy.ru/profile/efiand).
 
 ---
 
