@@ -6,71 +6,70 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body class="page__body">
 
+  <body class="page__body">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-navigation__logo" href="index.html">
-          <img class="main-navigation__image" src="./img/mishka-logo.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
+          <img class="main-navigation__image" src="./img/icon/logo-mishka.svg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
         </a>
-        <button class="main-navigation__toggle">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
+        <a class="main-navigation__toggle">
+          <span class="visually-hidden">Переключить отображение меню.</span>
+        </a>
         <ul class="main-navigation__list page-list">
           <li class="page-list__item">
-            <a class="page-list__link" href="#!">Каталог товаров</a>
+            <a class="page-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="page-list__item">
-            <a class="page-list__link" href="#!">Вязание на заказ</a>
+            <a class="page-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-navigation__list user-list">
           <li class="user-list__item">
-            <a class="user-list__link user-list__link--icon link-icon" href="#!">Поиск по сайту</a>
+            <a class="user-list__link user-list__link--icon" href="#!">Поиск по сайту</a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link user-list__link--icon link-icon" href="#!">Корзина: пока пуста</a>
+            <a class="user-list__link user-list__link--icon" href="#!">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page__order">
-      <h1 class="head-title">Вязание на заказ</h1>
+    <main class="page-order">
+      <h1 class="head-title head-title--form-title">Вязание на заказ</h1>
 
       <section class="order">
         <h2 class="visually-hidden">Форма заполнения заказа.</h2>
-
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <fieldset class="form__block form-block">
             <legend class="form-block__name">Тип</legend>
-            <label class="form-block__label">Аксессуар для интерьера
-              <input class="form-block__checker" type="radio" name="type" value="interior accessory" checked>
+            <label class="form-block__label">
+              <input class="form-block__checker" type="radio" name="type" value="interior accessory" checked>Аксессуар для интерьера
             </label>
-            <label class="form-block__label">Детская игрушка
-              <input class="form-block__checker" type="radio" name="type" value="children's toy">
+            <label class="form-block__label">
+              <input class="form-block__checker" type="radio" name="type" value="children's toy">Детская игрушка
             </label>
           </fieldset>
           <fieldset class="form__block form-block">
             <legend class="form-block__name">Цвет</legend>
-            <label class="form-block__label">Белый
-              <input class="form-block__checker" type="checkbox" name="white" checked>
+            <label class="form-block__label">
+              <input class="form-block__checker" type="checkbox" name="white" checked>Белый
             </label>
-            <label class="form-block__label">Серый
-              <input class="form-block__checker" type="checkbox" name="grey" checked>
+            <label class="form-block__label">
+              <input class="form-block__checker" type="checkbox" name="grey" checked>Серый
             </label>
-            <label class="form-block__label">Тиффани
-              <input class="form-block__checker" type="checkbox" name="tiffany">
+            <label class="form-block__label">
+              <input class="form-block__checker" type="checkbox" name="tiffany">Тиффани
             </label>
-            <label class="form-block__label">Черный
-              <input class="form-block__checker" type="checkbox" name="black">
+            <label class="form-block__label">
+              <input class="form-block__checker" type="checkbox" name="black">Черный
             </label>
-            <label class="form-block__label">Розовый
-              <input class="form-block__checker" type="checkbox" name="pink">
+            <label class="form-block__label">
+              <input class="form-block__checker" type="checkbox" name="pink">Розовый
             </label>
-            <label class="form-block__label">Оранжевый
-              <input class="form-block__checker" type="checkbox" name="orange">
+            <label class="form-block__label">
+              <input class="form-block__checker" type="checkbox" name="orange">Оранжевый
             </label>
           </fieldset>
           <fieldset class="form__block form-block">
@@ -87,23 +86,21 @@
           </fieldset>
           <fieldset class="form__block form-block">
             <legend class="form-block__name">Тел</legend>
-              <input class="form-block__control" type="tel" aria-label="Телефон" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            <input class="form-block__control" type="tel" aria-label="Телефон" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </fieldset>
           <fieldset class="form__block form-block">
             <legend class="form-block__name">E-mail</legend>
-              <input class="form-block__control" type="email" aria-label="Почта" name="email" placeholder="Ваш Email*" required>
+            <input class="form-block__control" type="email" aria-label="Почта" name="email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="form__block form-block">
             <legend class="form-block__name">Доп</legend>
-            <label class="form-block__label">Дополнительно:
-              <textarea class="form-block__control"  type="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </label>
+            <span class="visually-hidden">Дополнительно.</span>
+            <textarea class="form-block__control form-block__control--textarea"  type="text" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <p class="form__footnote">*Поля обязательны для заполнения</p>
           <button class="form__button button" type="submit">Отправить заказ</button>
         </form>
       </section>
-
     </main>
 
     <footer class="main-footer">

@@ -1,0 +1,42 @@
+.form-block {
+  position: relative;
+  display: grid;
+  margin-bottom: 30px;
+}
+
+.form-block__name {
+  position: relative;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.form-block__label {
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.form-block__control {
+  width: 100%;
+  padding: 16px 0;
+  font-family: inherit;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 17px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &--textarea {
+    padding: 17px;
+    border: 2px solid #444444;
+    box-sizing: border-box;
+  }
+}
