@@ -1,6 +1,7 @@
 .reviews {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 30px;
 }
 
 .reviews__title {
@@ -32,16 +33,25 @@
 }
 
 .reviews__link {
+  display: block;
   font-size: 17px;
   line-height: 30px;
   font-weight: 400;
   color: #444444;
   text-decoration: none;
+
+  &--write {
+    grid-column: 1 / -1;
+    padding: 16px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid #444444;
+  }
 }
 
 .reviews__button {
   margin-bottom: 38px;
-  &--write {
-    grid-column: 1 / -1;
-  }
 }
