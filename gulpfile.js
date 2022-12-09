@@ -21,7 +21,7 @@ export const styles = () => {
 
 const buildHtml = () => {
   return gulp
-    .src('source/layout/pages/**/*.twig')
+    .src('source/layouts/pages/**/*.twig')
     .pipe(twig())
     .pipe(gulp.dest('source'));
 }
@@ -50,7 +50,7 @@ const server = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
-  gulp.watch('source/layout/**/*.twig', gulp.series(buildHtml, reload));
+  gulp.watch('source/layouts/**/*.twig', gulp.series(buildHtml, reload));
 }
 
 
