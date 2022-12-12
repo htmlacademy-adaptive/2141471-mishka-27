@@ -1,0 +1,38 @@
+.main-navigation {
+  position: relative;
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-navigation__logo {
+  display: block;
+  padding: 22px;
+}
+
+.main-navigation__image {
+  margin: 0 auto;
+}
+
+.main-navigation__toggle {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 20px;
+  height: 14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    width: 20px;
+    height: 14px;
+    background-image: url("../../img/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

@@ -1,39 +1,7 @@
-<!DOCTYPE html>
-<html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-	  <body class="page__body">
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-navigation__logo" href="index.html">
-          <img class="main-navigation__image" src="./img/logo-mishka.jpg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
-        </a>
-        <a class="main-navigation__toggle" href="#!">
-          <span class="visually-hidden">Переключить отображение меню.</span>
-        </a>
-        <ul class="main-navigation__list page-list">
-          <li class="page-list__item">
-            <a class="page-list__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="page-list__item">
-            <a class="page-list__link" href="form.html">Вязание заказ</a>
-          </li>
-        </ul>
-        <ul class="main-navigation__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__link user-list__link--icon" href="#!">Поиск по сайту</a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link user-list__link--icon" href="#!">Корзина: пока пуста</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-				  <main class="page-order">
+{% extends "../main.twig" %}
+
+{% block main %}
+  <main class="page-order">
     <h1 class="head-title">Вязание на заказ</h1>
     <section class="order">
       <h2 class="visually-hidden">Форма заполнения заказа.</h2>
@@ -98,30 +66,10 @@
       </form>
     </section>
   </main>
-				<footer class="page-footer">
-      <a class="page-footer__link link-logo" href="index.html">
-        <span class="visually-hidden">Логотип сайта интернет-магазина Мишка.</span>
-      </a>
-      <ul class="page-footer__list social-list">
-        <li class="social-list__item">
-          <a class="social-list__link social" href="#!">
-            <span class="visually-hidden">Социальная сеть В Контакте.</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social" href="#!">
-            <span class="visually-hidden">Социальная сеть Ютюб.</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social" href="#!">
-            <span class="visually-hidden">Социальная сеть Телеграмм.</span>
-          </a>
-        </li>
-      </ul>
-      <a class="page-footer__link link-academy" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="link-academy__text">Разработано</span>
-      </a>
-    </footer>
-				  </body>
+{% endblock %}
+
+{% block modal %}
+{% endblock %}
+
+  </body>
 </html>
