@@ -3,6 +3,7 @@
 {% block main %}
   <main class="page-order">
     <h1 class="head-title">Вязание на заказ</h1>
+
     <section class="order">
       <h2 class="visually-hidden">Форма заполнения заказа.</h2>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
@@ -10,31 +11,39 @@
         <fieldset class="form__block form-block">
           <legend class="form-block__name">Тип</legend>
           <label class="form-block__label">
-            <input class="form-block__checker" type="radio" name="type" value="interior accessory" checked> Аксессуар для интерьера
+            <input class="form-block__checker" type="radio" name="type" value="interior accessory" checked>
+						Аксессуар для интерьера
           </label>
           <label class="form-block__label">
-            <input class="form-block__checker" type="radio" name="type" value="children's toy"> Детская игрушка
+            <input class="form-block__checker" type="radio" name="type" value="children's toy">
+						Детская игрушка
           </label>
         </fieldset>
         <fieldset class="form__block form-block">
           <legend class="form-block__name">Цвет</legend>
           <label class="form-block__label">
-            <input class="form-block__checker" type="checkbox" name="white" checked>Белый
+            <input class="form-block__checker" type="checkbox" name="white" checked>
+						Белый
           </label>
           <label class="form-block__label">
-            <input class="form-block__checker" type="checkbox" name="grey" checked>Серый
+            <input class="form-block__checker" type="checkbox" name="grey" checked>
+						Серый
           </label>
           <label class="form-block__label">
-            <input class="form-block__checker" type="checkbox" name="tiffany">Тиффани
+            <input class="form-block__checker" type="checkbox" name="tiffany">
+						Тиффани
           </label>
           <label class="form-block__label">
-            <input class="form-block__checker" type="checkbox" name="black">Черный
+            <input class="form-block__checker" type="checkbox" name="black">
+						Черный
           </label>
           <label class="form-block__label">
-            <input class="form-block__checker" type="checkbox" name="pink">Розовый
+            <input class="form-block__checker" type="checkbox" name="pink">
+						Розовый
           </label>
           <label class="form-block__label">
-            <input class="form-block__checker" type="checkbox" name="orange">Оранжевый
+            <input class="form-block__checker" type="checkbox" name="orange">
+						Оранжевый
           </label>
         </fieldset>
         <fieldset class="form__block form-block">
@@ -59,7 +68,7 @@
         </fieldset>
         <fieldset class="form__block form-block">
           <legend class="form-block__name">Доп</legend>
-          <textarea class="form-block__control form-block__control--textarea" aria-label="Дополнительно" type="text" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="form-block__control form-block__control--textarea" aria-label="Дополнительно" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <p class="form__footnote">*Поля обязательны для заполнения</p>
         <button class="form__button button" type="submit">Отправить заказ</button>

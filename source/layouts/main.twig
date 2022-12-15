@@ -8,9 +8,9 @@
   </head>
 	{% block header %}
   <body class="page__body">
-    <header class="main-header">
+    <header {{ page == 'index' ? 'class="main-header"' : 'class="main-header main-header--bg-color"' }}>
       <nav class="main-navigation">
-        <a class="main-navigation__logo" href="index.html">
+        <a class="main-navigation__logo" {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} >
           <img class="main-navigation__image" src="./img/logo-mishka.jpg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
         </a>
         <a class="main-navigation__toggle" href="#!">
@@ -18,10 +18,10 @@
         </a>
         <ul class="main-navigation__list page-list">
           <li class="page-list__item">
-            <a class="page-list__link" href="catalog.html">Каталог товаров</a>
+            <a class="page-list__link" {{ page == 'catalog' ? 'aria-current="page"' : 'href="catalog.html"' }} >Каталог товаров</a>
           </li>
           <li class="page-list__item">
-            <a class="page-list__link" href="form.html">Вязание заказ</a>
+            <a class="page-list__link" {{ page == 'form' ? 'aria-current="page"' : 'href="form.html"' }} >Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-navigation__list user-list">
@@ -32,6 +32,15 @@
             <a class="user-list__link user-list__link--icon" href="#!">Корзина: пока пуста</a>
           </li>
         </ul>
+				<ul class="main-navigation__list product-list">
+        	<li class="product-list__item">
+          	<a class="product-list__link" href="#!">Новые поступления</a>
+        	</li>
+        	<li class="product-list__item">
+          	<a class="product-list__link" href="#!">Распродажа</a>
+        	</li>
+      	</ul>
+				<a class="main-navigation__link" href="#!">Бесплатная доставка по России</a>
       </nav>
     </header>
 		{% endblock %}
@@ -43,7 +52,7 @@
 		{% block footer %}
 		<footer class="page-footer">
       <a class="page-footer__link link-logo" href="index.html">
-        <span class="visually-hidden">Логотип сайта интернет-магазина Мишка.</span>
+				<img class="link-logo__logo" src="../img/logo-footer.jpg" width="102" height="34" alt="Логотип сайта интернет-магазина Мишка.">
       </a>
       <ul class="page-footer__list social-list">
         <li class="social-list__item">
@@ -83,9 +92,16 @@
             <input class="select-form__checker" type="radio" name="size" value="large">
           </label>
         </div>
-        <button class="modal__button button button--secondary" type="button">Добавить</button>
+        <button class="modal__button button button--secondary" type="submit">Добавить</button>
       </form>
     </div>
 		{% endblock %}
+
+		<script>
+  		window.pixelperfect = {
+    		breakpoints: [320, 768, 1150]
+  		};
+		</script>
+		<script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"></script>
   </body>
 </html>

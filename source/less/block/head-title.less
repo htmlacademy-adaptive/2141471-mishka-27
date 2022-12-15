@@ -1,14 +1,23 @@
 .head-title {
   margin: 0;
-  padding: 73px 20px;
+  padding: 73px 30px;
+  min-height: 138px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
-  background-color: #f1f1f1;
   text-align: center;
 
-  &--main {
-    padding: 90px 30px 120px;
-    background-color: inherit;
+  @media (min-width: 768px) {
+    min-height: 440px;
+    padding: 150px 30px 30px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 1150px) {
+    min-height: 436px;
+    padding: 163px 30px 30px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }

@@ -1,7 +1,9 @@
 import gulp from 'gulp';
+import getData from 'gulp-data';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
+import posthtml from 'gulp-posthtml';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import twig from 'gulp-twig';
@@ -22,7 +24,19 @@ export const styles = () => {
 const buildHtml = () => {
   return gulp
     .src('source/layouts/pages/**/*.twig')
+    .pipe(
+      getData(({ path }) => {
+        const page = path
+          .replace(/^.*pages(\\+|\/+)(.*)\.twig$/, "$2")
+          .replace(/\\/g, "/");
+
+        return {
+          page,
+        };
+      })
+    )
     .pipe(twig())
+    .pipe(posthtml())
     .pipe(gulp.dest('source'));
 }
 
