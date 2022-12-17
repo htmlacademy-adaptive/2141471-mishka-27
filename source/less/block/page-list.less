@@ -1,13 +1,16 @@
 .page-list {
   display: grid;
   background-color: #ffffff;
+  display: none;
 
   @media (min-width: 768px) {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     display: flex;
     padding-left: 30px;
+    min-width: 370px;
     background-color: inherit;
+    box-sizing: border-box;
   }
 
   @media (min-width: 1150px) {
@@ -42,7 +45,7 @@
   }
 
   @media (min-width: 768px) {
-    padding: 20px;
+    padding: 20px 16px 20px 20px;
     font-size: 15px;
   }
 
