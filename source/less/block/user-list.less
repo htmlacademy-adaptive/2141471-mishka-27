@@ -1,20 +1,20 @@
 .user-list {
-  display: grid;
   background-color: #ffffff;
 
-  @media (min-width: 768px), (min-width: 1150px) {
+  @media (min-width: 768px) {
     grid-column: 3 / -1;
     display: flex;
-    padding-right: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     min-width: 398px;
+    padding-right: 25px;
+    border-bottom: 1px solid #ececec;
     box-sizing: border-box;
   }
 }
 
 .user-list__item {
-  border-bottom: 1px solid #ececec;
-
-  @media (min-width: 768px), (min-width: 1150px) {
+  @media (min-width: 768px) {
     border-left: 1px solid #ececec;
   }
 }
@@ -26,7 +26,21 @@
   line-height: 24px;
   font-weight: 700;
 
+  @media (min-width: 768px) {
+    padding: 32px 30px 32px 80px;
+  }
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
+  }
+
+  &--icon {
+    @media (min-width: 768px) {
+      padding: 32px 40px;
+
+      .user-list__text {
+        display: none;
+      }
+    }
   }
 }

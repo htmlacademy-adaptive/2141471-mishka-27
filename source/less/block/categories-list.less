@@ -6,9 +6,29 @@
   }
 }
 
-.categories-list__item:nth-child(2n) {
+.categories-list__item--alter() {
   .categories-list__link {
     background-color: #56c3b2;
+  }
+
+  &:hover,
+  &:active {
+    background-color: #46c1ae;
+  }
+}
+
+.categories-list__item {
+  @media (max-width: 767px) {
+    &:nth-child(2n) {
+      .categories-list__item--alter();
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:nth-child(4n-1),
+    &:nth-child(4n-2) {
+      .categories-list__item--alter();
+    }
   }
 }
 

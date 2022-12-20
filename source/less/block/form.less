@@ -35,14 +35,31 @@
   }
 }
 
+.form__footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: 1150px) {
+    width: 702px;
+    margin-left: 175px;
+  }
+}
+
 .form__footnote {
-  margin: -16px 0;
+  margin: 0;
   font-size: 14px;
   line-height: 16px;
   color: #444444;
 
   @media (min-width: 768px) {
-    grid-column: 2 / -1;
+    order: 2;
     margin: 0;
     font-size: 17px;
     text-align: right;

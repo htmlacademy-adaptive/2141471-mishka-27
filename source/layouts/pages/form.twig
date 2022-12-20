@@ -68,13 +68,18 @@
 				</fieldset>
 				<fieldset class="form__block form-block form-block--textarea">
 					<legend class="form-block__name">Доп</legend>
-					<textarea class="form-block__control" aria-label="Дополнительно" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+					<textarea class="form-block__control" aria-label="Дополнительно" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 				</fieldset>
-				<p class="form__footnote">*Поля обязательны для заполнения</p>
-				<button class="form__button button" type="submit">Отправить заказ</button>
+				<footer class="form__footer">
+					<p class="form__footnote">*Поля обязательны для заполнения</p>
+					<button class="form__button button" type="submit">Отправить заказ</button>
+				</footer>
 			</form>
 		</section>
 	</main>
 {% endblock %}
 
-{% block modal %}{% endblock %}</body></html>
+{% block modal %}
+{% endblock %}
+	</body>
+</html>

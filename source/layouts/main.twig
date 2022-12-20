@@ -8,7 +8,7 @@
 	</head>
 	{% block header %}
 		<body class="page__body">
-			<header {{ page == 'index' ? 'class="main-header"' : 'class="main-header main-header--bg-color"' }}>
+			<header class="main-header {{ page == 'index' ? 'main-header--light' }}">
 				<nav class="main-navigation">
 					<a class="main-navigation__logo" {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }}>
 						<img class="main-navigation__image" src="./img/logo-mishka.jpg" width="86" height="35" alt="Логотип сайта интернет-магазина Мишка.">
@@ -26,10 +26,14 @@
 					</ul>
 					<ul class="main-navigation__list user-list">
 						<li class="user-list__item">
-							<a class="user-list__link user-list__link--icon" href="#!">Поиск по сайту</a>
+							<a class="user-list__link user-list__link--icon" href="#!">
+								<span class="user-list__text">Поиск по сайту</span>
+							</a>
 						</li>
 						<li class="user-list__item">
-							<a class="user-list__link user-list__link--icon" href="#!">Корзина: пока пуста</a>
+							<a class="user-list__link" href="#!">
+								<span class="user-list__text">Корзина: пока пуста</span>
+							</a>
 						</li>
 					</ul>
 					<ul class="main-navigation__list product-list">
@@ -52,7 +56,7 @@
 		{% block footer %}
 			<footer class="page-footer">
 				<a class="page-footer__link link-logo" href="index.html">
-					<img class="link-logo__logo" src="../img/logo-footer.jpg" width="102" height="34" alt="Логотип сайта интернет-магазина Мишка.">
+					<img class="link-logo__logo" src="./img/logo-footer.svg" width="102" height="34" alt="Логотип сайта интернет-магазина Мишка.">
 				</a>
 				<ul class="page-footer__list social-list">
 					<li class="social-list__item">
@@ -79,7 +83,7 @@
 		{% block modal %}
 			<div class="modal">
 				<form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
-					<h3 class="modal__title">Добавить в корзину</h3>
+					<h2 class="modal__title">Добавить в корзину</h2>
 					<p class="modal__text">Выберите размер:</p>
 					<div class="select-form">
 						<label class="select-form__name">S
