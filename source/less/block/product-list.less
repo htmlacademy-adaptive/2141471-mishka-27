@@ -1,3 +1,15 @@
 .product-list {
   display: none;
+  padding-left: 15px;
+
+  @media (min-width: 1150px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.product-list__link {
+  display: block;
+  padding: 20px 28px 20px 35px;
+  font-weight: 700;
 }

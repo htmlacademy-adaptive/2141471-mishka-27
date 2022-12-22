@@ -1,16 +1,46 @@
+.user-list {
+  background-color: #ffffff;
+
+  @media (min-width: 768px) {
+    grid-column: 3 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 398px;
+    padding-right: 25px;
+    border-bottom: 1px solid #ececec;
+    box-sizing: border-box;
+  }
+}
 
 .user-list__item {
-  border-bottom: 1px solid #ececec;
+  @media (min-width: 768px) {
+    border-left: 1px solid #ececec;
+  }
 }
 
 .user-list__link {
   display: block;
-  padding: 27px 0 27px 76px;
+  padding: 27px 30px 27px 76px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
 
+  @media (min-width: 768px) {
+    padding: 32px 30px 32px 80px;
+  }
+
   &:hover {
-    opacity: 0.6;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &--icon {
+    @media (min-width: 768px) {
+      padding: 32px 40px;
+
+      .user-list__text {
+        display: none;
+      }
+    }
   }
 }

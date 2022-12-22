@@ -2,70 +2,74 @@
 
 {% block main %}
 	<main class="page-inner">
-    <h1 class="head-title">Каталог товаров</h1>
-   	<section class="catalog">
-      <h2 class="visually-hidden">Список товаров.</h2>
-      <ul class="catalog__list card-product">
-        <li class="card-product__item">
-          <a class="card-product__link" href="#!">
-            <img class="card-product__image" src="./img/catalog/rabbit.jpg" width="260" height="195" alt="Фото вязанный зайчик.">
-          </a>
-          <div class="card-product__purchase">
-            <h3 class="card-product__title">Зайчик-попрыгайчик</h3>
-            <p class="card-product__info">Рост 30 см, вес 200 г</p>
-            <div class="card-product__price price-block">
-              <b class="price-block__price">1 200 руб.</b>
-              <a class="price-block__link cart" href="#!">
-                <span class="visually-hidden">Положить в корзину.</span>
-              </a>
-            </div>
-          </div>
-        </li>
-        <li class="card-product__item">
-          <a class="card-product__link" href="#!">
-            <img class="card-product__image" src="./img/catalog/basket.jpg" width="260" height="195" alt="Фото вязанная корзина для белья.">
-          </a>
-          <div class="card-product__purchase">
-            <h3 class="card-product__title">Корзинка для белья</h3>
-            <p class="card-product__info">Диаметр 15 см, высота 10 см</p>
-            <div class="card-product__price price-block">
-              <b class="price-block__price">690 руб.</b>
-              <a class="price-block__link cart" href="#!">
-                <span class="visually-hidden">Положить в корзину.</span>
-              </a>
-            </div>
-          </div>
-        </li>
-        <li class="card-product__item">
-          <a class="card-product__link" href="#!">
-            <img class="card-product__image" src="./img/catalog/big-basket.jpg" width="260" height="195" alt="Фото большая вязанная корзина для игрушек.">
-          </a>
-          <div class="card-product__purchase">
-            <h3 class="card-product__title">Большая корзинка для игрушек</h3>
-            <p class="card-product__info">Диаметр 30 см, высота 30 см</p>
-            <div class="card-product__price price-block">
-              <b class="price-block__price">1 500 руб.</b>
-              <a class="price-block__link cart" href="#!">
-                <span class="visually-hidden">Положить в корзину.</span>
-              </a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-   	<section class="overview">
-      <div class="product-overview">
-        <h2 class="product-overview__title">Процесс производства</h2>
-        <img class="product-overview__review" src="./img/catalog/medium-basket.jpg" width="260" height="150" alt="Видео производства.">
-        <button class="product-overview__button video-button" type="button">
-          <span class="visually-hidden">Воспроизвести видео.</span>
-        </button>
-        <p class="product-overview__description">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное
-          видео о том, как появляются наши товары.
-        </p>
-        <a class="product-overview__link button" href="./form.html">Сделать заказ</a>
-      </div>
-    </section>
-  </main>
+		<h1 class="head-title head-title--secondary">Каталог товаров</h1>
+
+		<section class="catalog">
+			<h2 class="visually-hidden">Список товаров.</h2>
+			<ul class="catalog__list card-product">
+				<li class="card-product__item">
+					<a class="card-product__link" href="#!">
+						<img class="card-product__image" src="./img/catalog/rabbit.jpg" width="260" height="195" alt="Фото вязанный зайчик.">
+					</a>
+					<div class="card-product__purchase">
+						<h3 class="card-product__title">Зайчик-попрыгайчик</h3>
+						<p class="card-product__info">Рост 30 см, вес 200 г</p>
+						<div class="card-product__price price-block">
+							<b class="price-block__price">1 200 руб.</b>
+							<a class="price-block__link cart" href="#!">
+								<span class="visually-hidden">Положить в корзину.</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li class="card-product__item">
+					<a class="card-product__link" href="#!">
+						<img class="card-product__image" src="./img/catalog/basket.jpg" width="260" height="195" alt="Фото вязанная корзина для белья.">
+					</a>
+					<div class="card-product__purchase">
+						<h3 class="card-product__title">Корзинка для белья</h3>
+						<p class="card-product__info">Диаметр 15 см, высота 10 см</p>
+						<div class="card-product__price price-block">
+							<b class="price-block__price">690 руб.</b>
+							<a class="price-block__link cart" href="#!">
+								<span class="visually-hidden">Положить в корзину.</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li class="card-product__item">
+					<a class="card-product__link" href="#!">
+						<img class="card-product__image" src="./img/catalog/big-basket.jpg" width="260" height="195" alt="Фото большая вязанная корзина для игрушек.">
+					</a>
+					<div class="card-product__purchase">
+						<h3 class="card-product__title">Большая корзинка<br>
+							для игрушек</h3>
+						<p class="card-product__info">Диаметр 30 см, высота 30 см</p>
+						<div class="card-product__price price-block">
+							<b class="price-block__price">1 500 руб.</b>
+							<a class="price-block__link cart" href="#!">
+								<span class="visually-hidden">Положить в корзину.</span>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<section class="overview">
+			<div class="product-overview">
+				<h2 class="product-overview__title">Процесс производства</h2>
+				<div class="product-overview__video">
+					<img class="product-overview__review" src="./img/catalog/video-cart.jpg" width="260" height="150" alt="Видео производства.">
+				</div>
+				<button class="product-overview__button video-button" type="button">
+					<span class="visually-hidden">Воспроизвести видео.</span>
+				</button>
+				<p class="product-overview__description">
+					По просьбам наших любимых фолловеров мы сняли для вас подробное	видео о том, как появляются наши товары.
+				</p>
+				<a class="product-overview__link button" href="./form.html">Сделать заказ</a>
+			</div>
+		</section>
+	</main>
 {% endblock %}
