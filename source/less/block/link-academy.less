@@ -1,12 +1,27 @@
 .link-academy {
   display: flex;
-  padding: 30px 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 39px 13px;
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
   border-top: 1px solid #e5e5e5;
 
+  .link-academy__icon {
+    color: #63d1bb;
+  }
+
   @media (min-width: 768px) {
+    padding: 0;
     border-top: none;
   }
 }
+
+.link-academy__icon {
+  @media (min-width: 768px) {
+    margin-left: 28px;
+  }
+}
+
+

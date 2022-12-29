@@ -14,6 +14,6 @@ module.exports = {
     getPosthtmlBemLinter({
       getSourceName,
     }),
-    minifyHtml({ collapseWhitespace: "aggressive" }),
+    minifyHtml({ collapseWhitespace: "aggressive", minifySvg: false }),
   ],
 };

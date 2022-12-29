@@ -1,7 +1,18 @@
 .main-header {
-  background-color: #f1f1f1;
+  position: relative;
 
-  &--light {
-    background-color: #f9f9f9;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 79px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #ececec;
+
+    @media (min-width: 768px) {
+      top: 87px;
+    }
   }
 }

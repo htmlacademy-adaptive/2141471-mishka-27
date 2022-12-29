@@ -1,6 +1,15 @@
 .reviews-list {
   display: grid;
   gap: 30px;
+  margin: 0 0 40px;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: 768px) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    margin: 0;
+  }
 }
 
 .reviews-list__item {
@@ -8,8 +17,8 @@
   color: #444444;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 175px;
-    gap: 60px;
+    grid-template-columns: 1fr 176px;
+    gap: 30px;
   }
 }
 
@@ -19,11 +28,30 @@
 
   @media (min-width: 768px) {
     grid-column: 1 / -1;
+    padding: 0 20px;
+    font-size: 17px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    margin-bottom: 14px;
+    padding-right: 80px;
   }
 }
 
 .reviews-list__author {
-  margin: 0;
+  margin: 0 0 29px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+.reviews-list__name {
   font-size: 17px;
   font-weight: 700;
   color: #000000;
@@ -31,9 +59,16 @@
   @media (min-width: 768px) {
     font-size: 18px;
   }
+
+  @media (min-width: 1150px) {
+    font-size: 17px;
+  }
 }
 
 .reviews-list__link {
+  display: block;
+  padding: 2px 0;
+  font-size: 17px;
   line-height: 30px;
   font-weight: 400;
   color: #444444;
@@ -44,7 +79,11 @@
 }
 
 .reviews-list__button {
+  display: flex;
+  border: 1px solid #ececec;
+
   @media (min-width: 768px) {
     grid-column: 2 / -1;
+    border: none;
   }
 }

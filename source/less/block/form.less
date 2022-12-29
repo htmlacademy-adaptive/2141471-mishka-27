@@ -1,35 +1,42 @@
 .form {
   display: grid;
-  gap: 30px;
+
+  .form__block:nth-child(2n+1) {
+    @media (min-width: 768px) {
+      background-color: #f1f1f1;
+    }
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: 230px 1fr;
   }
 
   @media (min-width: 1150px) {
-    grid-template-columns: 175px 230px 1fr;
+    grid-template-columns: 159px 771px 1fr;
+    column-gap: 15px;
   }
 }
 
 .form__text {
-  margin: 0;
+  margin: 0 0 29px;
   font-size: 13px;
   color: #444444;
 
   @media (min-width: 768px) {
     grid-column: 1 / -1;
+    margin-bottom: 13px;
+    padding: 0 50px;
     font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: 1150px) {
-    grid-column: 2 / -1;
+    grid-column: 2 / 3;
+    margin-bottom: 14px;
   }
 }
 
 .form__block {
-  margin: 0;
-  border: none;
-
   @media (min-width: 768px) {
     grid-column: 1 / -1;
   }
@@ -44,6 +51,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 50px;
   }
 
   @media (min-width: 1150px) {
@@ -53,7 +61,7 @@
 }
 
 .form__footnote {
-  margin: 0;
+  margin: 0 0 30px;
   font-size: 14px;
   line-height: 16px;
   color: #444444;
@@ -74,10 +82,12 @@
   padding: 14px;
 
   @media (min-width: 768px) {
-    grid-row: 8 / 9;
+    width: 230px;
+    padding: 17px;
+    line-height: 16px;
   }
 
   @media (min-width: 1150px) {
-    grid-column: 2 / 3;
+    padding: 15px;
   }
 }

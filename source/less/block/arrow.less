@@ -1,6 +1,28 @@
 .arrow {
-  padding: 16px;
+  position: relative;
+  padding: 12px 43px 9px 37px;
   background-color: inherit;
-  border: 1px solid #ececec;
+  border: none;
   cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -1px;
+    width: 1px;
+    height: 50px;
+    background-color: #ececec;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: 768px) {
+      content: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 37px;
+  }
 }

@@ -1,19 +1,34 @@
 .hero {
   @media (min-width: 768px) {
     position: relative;
+    margin: 0 auto;
     padding: 0 50px;
     background-color: #f9f9f9;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -9px;
-      left: 0;
+      bottom: -12px;
+      left: -1px;
       right: 0;
       min-width: 770px;
       height: 24px;
       background-image: url("../img/icon/wave.svg");
       background-position: bottom;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    margin-bottom: 10px;
+    padding-right: 50px;
+
+    &::after {
+      bottom: -17px;
+      left: 0;
+      right: 0;
+      min-width: 1150px;
+      height: 34px;
+      background-image: url("../img/icon/wave-desktop.svg");
     }
   }
 }

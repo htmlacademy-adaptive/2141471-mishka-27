@@ -7,7 +7,7 @@
 			работы для дома
 		</h1>
 
-		<section class="main-container__section hero">
+		<section class="hero">
 			<h2 class="visually-hidden">Меню предлагаемой продукции.</h2>
 			<ul class="hero__list categories-list">
 				<li class="categories-list__item">
@@ -16,6 +16,9 @@
 							Предметы<br>
 							интерьера
 						</span>
+						<svg class="categories-list__icon" aria-hidden="true" focusable="false" width="40" height="62" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/icon/interior.svg#interior"/>
+            </svg>
 					</a>
 				</li>
 				<li class="categories-list__item categories-list__item--alter">
@@ -24,12 +27,15 @@
 							Детские<br>
 							игрушки
 						</span>
+						<svg class="categories-list__icon" aria-hidden="true" focusable="false" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./img/icon/toy.svg#toy"/>
+            </svg>
 					</a>
 				</li>
 			</ul>
 		</section>
 
-		<section class="main-container__section week-product">
+		<section class="week-product">
 			<div class="product-card">
 				<h2 class="product-card__title second-title">Вязаные корзинки</h2>
 				<p class="product-card__text">Товар недели</p>
@@ -46,63 +52,67 @@
 					<dd class="parameter-list__option">15 см</dd>
 				</dl>
 				<img class="product-card__image" src="./img/baskets.jpg" width="260" height="315" alt="Вязанные корзинки.">
-				<p class="product-card__price">
-					<b>Цена: 990 руб.</b>
-				</p>
+				<b class="product-card__price">Цена: 990 руб.</b>
 				<button class="product-card__button button" type="button">Заказать</button>
 			</div>
 		</section>
 
-		<section class="main-container__section about">
+		<section class="about">
 			<h2 class="about__title second-title">Коротко о нас:</h2>
 			<ul class="about__list">
-				<li class="about__item">
+				<li class="about__item about__item--flower">
 					Экологически<br>
 					чистые материалы
 				</li>
-				<li class="about__item">
+				<li class="about__item about__item--banknote">
 					Скандинавский стиль<br>
 					по российской цене
 				</li>
-				<li class="about__item">
+				<li class="about__item about__item--heart">
 					Увеличивает лайки<br>
 					на фотографиях
 				</li>
-				<li class="about__item">
+				<li class="about__item about__item--tangle">
 					Связано вручную<br>
 					с любовью и умилением
 				</li>
-				<li class="about__item">
+				<li class="about__item about__item--rocket">
 					Поддержка отечественного<br>
 					производителя
 				</li>
-				<li class="about__item">
+				<li class="about__item about__item--packaging">
 					Поставляется<br>
 					в подарочной упаковке
 				</li>
 			</ul>
 		</section>
 
-		<section class="main-container__section reviews">
+		<section class="reviews">
 			<h2 class="reviews__title second-title">Отзывы</h2>
 			<ul class="reviews__list reviews-list">
 				<li class="reviews-list__item">
 					<p class="reviews-list__description">
-						Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как<br>
-						у популярных инстамамочек.
-						В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+						Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как <br>
+						у популярных инстамамочек.&nbsp;<br>
+						В отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp;<br>
 						и мои фотографии сразу стали более стильными, а также	набирают больше лайков!
 					</p>
 					<p class="reviews-list__author">
-						Анастасия Красильникова
+						<span class="reviews-list__name">Анастасия Красильникова</span>
 						<a class="reviews-list__link" href="#!">@misssssiskras</a>
 					</p>
 					<div class="reviews-list__button">
 						<button class="arrow arrow--left" type="button">
 							<span class="visually-hidden">Предыдущий отзыв.</span>
+							<svg class="arrow__icon" aria-hidden="true" focusable="false" width="50" height="26" xmlns="http://www.w3.org/2000/svg">
+              	<use xlink:href="./img/icon/arrow-left.svg#arrowleft"/>
+            	</svg>
 						</button>
 						<button class="arrow arrow--right" type="button">
 							<span class="visually-hidden">Следующий отзыв.</span>
+							<svg class="arrow__icon" aria-hidden="true" focusable="false" width="50" height="26" xmlns="http://www.w3.org/2000/svg">
+              	<use xlink:href="./img/icon/arrow-right.svg#arrowright"/>
+            	</svg>
 						</button>
 					</div>
 				</li>
@@ -110,7 +120,7 @@
 			<a class="reviews__link reviews__link--write" href="!#">Написать</a>
 		</section>
 
-		<section class="main-container__section contacts">
+		<section class="contacts">
 			<h2 class="contacts__title second-title">Контакты</h2>
 			<dl class="contacts__list contact-list">
 				<div class="contact-list__block">
@@ -124,7 +134,7 @@
 					<dd class="contact-list__meaning">
 						г. Санкт-Петербург<br>
 						ул. Большая Конюшенная<br>
-						д.19/8, офис 101
+						д. 19/8, офис 101
 					</dd>
 				</div>
 			</dl>
