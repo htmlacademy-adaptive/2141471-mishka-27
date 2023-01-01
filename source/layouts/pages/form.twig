@@ -8,17 +8,17 @@
 			<h2 class="visually-hidden">Форма заполнения заказа.</h2>
 			<form class="form" action="https://echo.htmlacademy.ru" method="post">
 				<p class="form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-					<fieldset class="form__block form-block form-block--radio">
-						<legend class="form-block__name">Тип</legend>
-						<label class="form-block__label">
-							<input class="form-block__checker" type="radio" name="type" value="interior accessory" checked>
-							Аксессуар для интерьера
-						</label>
-						<label class="form-block__label">
-							<input class="form-block__checker" type="radio" name="type" value="children's toy">
-							Детская игрушка
-						</label>
-					</fieldset>
+				<fieldset class="form__block form-block form-block--radio">
+					<legend class="form-block__name">Тип</legend>
+					<label class="form-block__label">
+						<input class="form-block__checker" type="radio" name="type" value="interior accessory" checked>
+						Аксессуар для интерьера
+					</label>
+					<label class="form-block__label">
+						<input class="form-block__checker" type="radio" name="type" value="children's toy">
+						Детская игрушка
+					</label>
+				</fieldset>
 				<fieldset class="form__block form-block form-block--checkbox">
 					<legend class="form-block__name">Цвет</legend>
 					<label class="form-block__label">
@@ -59,24 +59,24 @@
 					</label>
 				</fieldset>
 				<div class="form__block">
-				<fieldset class="form-block form-block--phone">
-					<legend class="form-block__name">Тел</legend>
-					<div class="form-block__block">
-						<input class="form-block__control" type="tel" aria-label="Телефон" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-						<svg class="form-block__icon" aria-hidden="true" focusable="false" width="25" height="24" xmlns="http://www.w3.org/2000/svg">
-            	<use xlink:href="../img/icon/phone.svg#phone"/>
-          	</svg>
-					</div>
-				</fieldset>
-				<fieldset class="form-block form-block--email">
-					<legend class="form-block__name">E-mail</legend>
-					<div class="form-block__block">
-						<input class="form-block__control" type="email" aria-label="Почта" name="email" placeholder="Ваш Email*" required>
-						<svg class="form-block__icon" aria-hidden="true" focusable="false" width="32" height="21" xmlns="http://www.w3.org/2000/svg">
-            	<use xlink:href="../img/icon/mail.svg#mail"/>
-          	</svg>
-					</div>
-				</fieldset>
+					<fieldset class="form-block form-block--phone">
+						<legend class="form-block__name">Тел</legend>
+						<div class="form-block__block">
+							<input class="form-block__control" type="tel" aria-label="Телефон" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+							<svg class="form-block__icon" aria-hidden="true" focusable="false" width="25" height="24" xmlns="http://www.w3.org/2000/svg">
+								<use xlink:href="../img/icon/phone.svg#phone"/>
+							</svg>
+						</div>
+					</fieldset>
+					<fieldset class="form-block form-block--email">
+						<legend class="form-block__name">E-mail</legend>
+						<div class="form-block__block">
+							<input class="form-block__control" type="email" aria-label="Почта" name="email" placeholder="Ваш Email*" required>
+							<svg class="form-block__icon" aria-hidden="true" focusable="false" width="32" height="21" xmlns="http://www.w3.org/2000/svg">
+								<use xlink:href="../img/icon/mail.svg#mail"/>
+							</svg>
+						</div>
+					</fieldset>
 				</div>
 				<fieldset class="form__block form-block form-block--textarea">
 					<legend class="form-block__name">Доп</legend>
@@ -91,5 +91,4 @@
 	</main>
 {% endblock %}
 
-{% block modal %}
-{% endblock %}
+{% block modal %}{% endblock %}
