@@ -10,52 +10,31 @@
 
 .select-form__name {
   position: relative;
-  flex-shrink: 0;
-  margin: 0;
+  padding-top: 16px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.select-form__checker {
+  appearance: none;
+  margin: -33px 0 0;
+  padding: 16px 33px;
   width: 82px;
   height: 52px;
-  font-weight: 700;
   color: inherit;
-  appearance: none;
+  text-align: center;
+  border: 2px solid rgba(68, 68, 68, 0.1);
   outline-offset: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 14px;
-    border: 2px solid rgba(68, 68, 68, 0.1);
-    background-color: #ffffff;
-    transition: opacity 0.2s ease-in-out;
-
-    @media (min-width: 768px) {
-      font-size: 17px;
-      line-height: 16px;
-    }
-  }
-
-  &--small {
-    &::before {
-      content: "S";
-    }
-  }
-
-  &--medium {
-    &::before {
-      content: "M";
-    }
-  }
-
-  &--large {
-    &::before {
-      content: "L";
-    }
+  &:checked {
+    border: 2px solid #63d1bb;
   }
 
   @media (min-width: 768px) {
+    padding: 16px 44px;
     width: 112px;
   }
 }

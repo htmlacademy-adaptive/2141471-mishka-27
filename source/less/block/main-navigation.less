@@ -1,8 +1,9 @@
 .main-navigation {
   position: relative;
   display: grid;
+  margin-left: auto;
+  margin-right: auto;
   width: 320px;
-  margin: 0 auto;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr auto 1fr;
@@ -34,6 +35,8 @@
 
   @media (min-width: 1150px) {
     grid-column: 2 / 3;
+    padding: 22px 20px 22px;
+    width: 230px;
   }
 }
 
@@ -51,6 +54,16 @@
 
 .main-navigation__toggle {
   position: absolute;
+  top: 29px;
+  right: 30px;
+  width: 21px;
+  height: 20px;
+
+  &--nojs {
+    background-image: url("../img/menu-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   &--closed {
     top: 32px;

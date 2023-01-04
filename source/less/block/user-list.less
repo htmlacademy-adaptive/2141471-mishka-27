@@ -1,13 +1,34 @@
 .user-list {
+  position: relative;
+
+  @media (max-width: 767px) {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      position: absolute;
+      top: 237px;
+      left: 0;
+      width: 320px;
+      background-color: #ffffff;
+    }
+  }
+
   @media (min-width: 768px) {
     grid-column: 3 / -1;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    min-width: 400px;
+    width: 400px;
     padding-right: 25px;
     border-bottom: 1px solid #ececec;
     box-sizing: border-box;
+  }
+
+  @media (min-width: 1150px) {
+    padding-right: 12px;
+    width: 412px;
   }
 }
 
@@ -32,6 +53,10 @@
     padding: 32px 25px 31px 31px;
   }
 
+  @media (min-width: 1150px) {
+    padding: 32px 32px 31px;
+  }
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
@@ -54,12 +79,8 @@
     }
 
     @media (min-width: 1150px) {
-      margin-right: 5px;
+      padding: 35px 32px 33px 34px;
     }
-  }
-
-  @media (min-width: 1150px) {
-    padding-right: 27px;
   }
 }
 

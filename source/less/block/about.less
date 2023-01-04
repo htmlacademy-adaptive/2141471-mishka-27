@@ -1,7 +1,8 @@
 .about {
   display: grid;
   padding: 38px 30px 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 320px;
   box-sizing: border-box;
 
@@ -37,6 +38,8 @@
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
     gap: 28px 0;
     margin-bottom: 30px;
     padding: 0 20px;
@@ -73,12 +76,7 @@
       left: 0;
       width: 47px;
       height: 27px;
-      background-image: url("../img/icon/bancnote.svg");
-    }
-
-    @media (min-width: 768px) {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
+      background-image: url("../img/icon/banknote.svg");
     }
   }
 
@@ -100,11 +98,6 @@
       height: 34px;
       background-image: url("../img/icon/tangle.svg");
     }
-
-    @media (min-width: 768px) {
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-    }
   }
 
   &--rocket {
@@ -114,11 +107,6 @@
       width: 55px;
       height: 23px;
       background-image: url("../img/icon/rocket.svg");
-    }
-
-    @media (min-width: 768px) {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
     }
   }
 
