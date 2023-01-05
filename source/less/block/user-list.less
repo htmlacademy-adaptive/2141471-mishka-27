@@ -1,33 +1,60 @@
 .user-list {
-  background-color: #ffffff;
+  position: relative;
+
+  @media (max-width: 767px) {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      position: absolute;
+      top: 237px;
+      left: 0;
+      width: 320px;
+      background-color: #ffffff;
+    }
+  }
 
   @media (min-width: 768px) {
     grid-column: 3 / -1;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    min-width: 398px;
+    width: 400px;
     padding-right: 25px;
     border-bottom: 1px solid #ececec;
     box-sizing: border-box;
   }
+
+  @media (min-width: 1150px) {
+    padding-right: 12px;
+    width: 412px;
+  }
 }
 
 .user-list__item {
+  border-bottom: 1px solid #ececec;
+
   @media (min-width: 768px) {
     border-left: 1px solid #ececec;
+    border-bottom: none;
   }
 }
 
 .user-list__link {
-  display: block;
-  padding: 27px 30px 27px 76px;
+  display: flex;
+  align-items: center;
+  padding: 27px 30px 27px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
 
   @media (min-width: 768px) {
-    padding: 32px 30px 32px 80px;
+    padding: 32px 25px 31px 31px;
+  }
+
+  @media (min-width: 1150px) {
+    padding: 32px 32px 31px;
   }
 
   &:hover {
@@ -35,12 +62,32 @@
   }
 
   &--icon {
+    .user-list__icon {
+      margin-right: 28px;
+    }
+
     @media (min-width: 768px) {
-      padding: 32px 40px;
+      padding: 35px 32px 33px 34px;
+
+      .user-list__icon {
+        margin-right: 0;
+      }
 
       .user-list__text {
         display: none;
       }
     }
+
+    @media (min-width: 1150px) {
+      padding: 35px 32px 33px 34px;
+    }
+  }
+}
+
+.user-list__icon {
+  margin-right: 25px;
+
+  @media (min-width: 768px) {
+    margin-right: 31px;
   }
 }

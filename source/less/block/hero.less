@@ -1,19 +1,33 @@
 .hero {
   @media (min-width: 768px) {
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
     padding: 0 50px;
     background-color: #f9f9f9;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -9px;
+      bottom: -12px;
       left: 0;
       right: 0;
-      min-width: 770px;
+      width: 100%;
       height: 24px;
       background-image: url("../img/icon/wave.svg");
-      background-position: bottom;
+      background-position: bottom left;
+      background-repeat: repeat-x;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    margin-bottom: 10px;
+    padding-right: 50px;
+
+    &::after {
+      bottom: -17px;
+      height: 34px;
+      background-image: url("../img/icon/wave-desktop.svg");
     }
   }
 }

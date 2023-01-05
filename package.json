@@ -17,7 +17,7 @@
     "htmlnano": "2.0.3",
     "pineglade-bemlinter": "0.1.2",
     "pineglade-w3c": "1.0.3",
-    "postcss": "8.3.11",
+    "postcss-sort-media-queries": "4.3.0",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.11",
     "svgo": "2.8.0",

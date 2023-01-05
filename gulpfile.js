@@ -7,6 +7,7 @@ import posthtml from 'gulp-posthtml';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import twig from 'gulp-twig';
+import sortMediaQueries from 'postcss-sort-media-queries';
 
 // Styles
 
@@ -15,6 +16,7 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
+      sortMediaQueries(),
       autoprefixer()
     ]))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))

@@ -1,51 +1,102 @@
 .product-overview {
   position: relative;
-  padding: 22px 30px 32px 34px;
+  padding: 20px 30px 32px 34px;
   border: 1px solid #ececec;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
     display: grid;
-    padding-top: 0;
+    padding: 0 40px 45px 40px;
   }
 
   @media (min-width: 1150px) {
     grid-template-columns: 683px 1fr;
-    padding-top: 0;
+    padding: 0;
   }
 }
 
 .product-overview__title {
+  position: relative;
   margin: 0 0 26px;
   padding-left: 56px;
   font-size: 17px;
   font-weight: 700;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 32px;
+    height: 22px;
+    color: #63d1bb;
+    background-image: url("../img/icon/camera.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+      top: -2px;
+    }
+
+    @media (min-width: 1150px) {
+      top: 46px;
+      left: 20px;
+    }
+  }
+
   @media (min-width: 768px) {
+    margin-bottom: 24px;
+    padding-left: 66px;
     font-size: 20px;
+  }
+
+  @media (min-width: 1150px) {
+    width: 250px;
+    margin: 0 auto 23px;
+    padding: 95px 20px 5px;
+    box-sizing: border-box;
   }
 }
 
 .product-overview__video {
-  margin: 0 -30px 0 -34px;
+  position: relative;
+  margin: 0 -30px 37px -34px;
   width: calc(100% + 64px);
 
   @media (min-width: 768px) {
     grid-row: 1 / 2;
-    margin-bottom: 20px;
+    margin: 0 -40px 41px -40px;
     min-height: 455px;
   }
 
   @media (min-width: 1150px) {
     grid-row: 1 / 5;
+    margin: 0;
+    width: 100%;
   }
 }
 
+.product-overview__button {
+  position: absolute;
+}
+
 .product-overview__description {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   padding: 0;
   font-size: 13px;
   color: #444444;
+
+  @media (min-width: 768px) {
+    margin: 0 0 41px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  @media (min-width: 1150px) {
+    width: 260px;
+    margin: 0 auto 52px;
+    padding: 0 10px 0 25px;
+    box-sizing: border-box;
+  }
 }
 
 .product-overview__link {
@@ -53,4 +104,14 @@
   font-size: 18px;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 17px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1150px) {
+    width: 230px;
+    margin-left: 80px;
+  }
 }

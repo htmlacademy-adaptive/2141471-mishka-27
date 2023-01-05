@@ -1,0 +1,40 @@
+.select-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.select-form__name {
+  position: relative;
+  padding-top: 16px;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.select-form__checker {
+  appearance: none;
+  margin: -33px 0 0;
+  padding: 16px 33px;
+  width: 82px;
+  height: 52px;
+  color: inherit;
+  text-align: center;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  outline-offset: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:checked {
+    border: 2px solid #63d1bb;
+  }
+
+  @media (min-width: 768px) {
+    padding: 16px 44px;
+    width: 112px;
+  }
+}

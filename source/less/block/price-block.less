@@ -1,4 +1,27 @@
 .price-block {
+  display: flex;
   padding: 22px 0 2px 0;
   border-top: 1px solid #ececec;
+
+  @media (min-width: 768px) {
+    margin-top: auto;
+  }
+
+  @media (min-width: 1150px) {
+    padding: 23px 0 0 0;
+  }
+}
+
+.price-block__price {
+  @media (min-width: 768px) {
+    font-size: 17px;
+  }
+}
+
+.price-block__link {
+  margin-left: auto;
+
+  @media (min-width: 1150px) {
+    margin-right: 5px;
+  }
 }

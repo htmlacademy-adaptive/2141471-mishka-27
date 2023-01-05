@@ -1,12 +1,14 @@
 .form-block {
   position: relative;
   display: grid;
-  margin-bottom: 30px;
+  margin: 0;
+  border: none;
   padding: 0;
 
   @media (min-width: 768px) {
     grid-template-columns: 150px 1fr;
-    gap: 20px;
+    gap: 24px 20px;
+    padding: 50px;
   }
 
   @media (min-width: 1150px) {
@@ -16,54 +18,188 @@
 
   &--radio {
     row-gap: 11px;
+    margin-bottom: 32px;
+
+    .form-block__name {
+      margin-bottom: 33px;
+
+      @media (min-width: 768px) {
+        margin-top: 17px;
+        margin-bottom: 17px;
+      }
+
+      @media (min-width: 1150px) {
+        margin-left: 59px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      row-gap: 27px;
+      margin-bottom: 0;
+    }
   }
 
   &--checkbox {
     row-gap: 23px;
+    margin-bottom: 33px;
 
-    @media (min-width: 768px) {
-      grid-template-columns: 150px 1fr 1fr;
+    .form-block__name {
+      margin-bottom: 25px;
 
-      .form-block__name {
+      @media (min-width: 768px) {
         grid-column: 1 / 2;
         grid-row: 1 / 4;
+        margin-top: 17px;
       }
 
-      .form-block__label {
+      @media (min-width: 1150px) {
+        margin-left: 59px;
+      }
+    }
+
+    .form-block__label {
+      @media (min-width: 768px) {
         grid-column: auto;
       }
     }
 
+    @media (min-width: 768px) {
+      grid-template-columns: 147px 1fr 1fr;
+      margin-bottom: 0;
+    }
+
     @media (min-width: 1150px) {
       grid-template-columns: 150px repeat(3, 238px);
+      padding: 50px 50px 28px;
     }
   }
 
   &--name {
     gap: 22px;
+    margin-bottom: 33px;
 
     .form-block__name {
-      margin-bottom: 28px;
+      margin-bottom: 29px;
+
+      @media (min-width: 768px) {
+        margin-top: 19px;
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: 1150px) {
+        margin-left: 59px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: 145px 1fr;
+      row-gap: 25px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1150px) {
+      grid-template-columns: 159px 702px;
+      column-gap: 18px;
+      row-gap: 24px;
+      padding: 47px 50px;
     }
   }
 
-  &--contact {
+  &--phone {
+    margin-bottom: 33px;
+
     .form-block__name {
       margin-bottom: 5px;
+
+      @media (min-width: 768px) {
+        margin-top: 14px;
+        margin-bottom: 0;
+      }
     }
 
     .form-block__control {
-      padding: 16px 0 15px 0;
+      background-color: inherit;
+      border-bottom: none;
       box-sizing: border-box;
 
       @media (min-width: 768px) {
-        grid-column: 2 / -1;
-        padding: 14px 17px 20px;
+        padding: 14px 17px 18px;
       }
+    }
+
+    .form-block__icon {
+      @media (min-width: 768px) {
+        width: 60px;
+      }
+
+      @media (min-width: 1150px) {
+        width: 35px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: 147px 1fr;
+      padding: 50px 50px 12px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1150px) {
+      grid-template-columns: 159px 702px;
+      gap: 15px;
+      padding-top: 53px;
+    }
+  }
+
+  &--email {
+    margin-bottom: 33px;
+
+    .form-block__name {
+      margin-bottom: 5px;
+
+      @media (min-width: 768px) {
+        margin-top: 17px;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1150px) {
+        margin-left: 59px;
+      }
+    }
+
+    .form-block__control {
+      border-bottom: none;
+      box-sizing: border-box;
+
+      @media (min-width: 768px) {
+        padding: 14px 17px 18px;
+      }
+    }
+
+    .form-block__icon {
+      @media (min-width: 768px) {
+        width: 60px;
+      }
+
+      @media (min-width: 1150px) {
+        width: 36px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: 147px 1fr;
+      padding: 12px 50px 50px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1150px) {
+      grid-template-columns: 159px 702px;
+      gap: 15px;
     }
   }
 
   &--textarea {
+    margin-bottom: 17px;
+
     .form-block__name {
       padding: 3px 0 0;
       margin-bottom: 20px;
@@ -71,31 +207,81 @@
 
     .form-block__control {
       min-height: 142px;
-      padding: 17px 17px 11px;
+      padding: 15px 15px;
       border: 2px solid #444444;
       box-sizing: border-box;
+    }
 
-      @media (min-width: 768px) {
-        grid-column: 2 / -1;
+    @media (min-width: 768px) {
+      grid-template-columns: 147px 1fr;
+      margin-bottom: 0;
+
+      .form-block__name {
+        margin-top: 19px;
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+
+    @media (min-width: 1150px) {
+      grid-template-columns: 159px 702px;
+      gap: 15px;
+      padding-bottom: 49px;
+
+      .form-block__name {
+        margin-left: 59px;
       }
     }
   }
 }
 
 .form-block__name {
-  padding: 2px 0;
+  position: relative;
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
   color: #63d1bb;
   text-transform: uppercase;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 60px;
+    width: 200px;
+    height: 1px;
+    background-color: #62d1ba;
+  }
+
   @media (min-width: 768px) {
     float: left;
+
+    &::after {
+      content: none;
+    }
   }
 
   @media (min-width: 1150px) {
     margin: 0 auto;
+  }
+}
+
+.form-block__block {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #000000;
+}
+
+.form-block__icon {
+  align-self: center;
+  width: 40px;
+
+  @media (min-width: 768px) {
+    width: 60px;
+  }
+
+  @media (min-width: 768px) {
+    width: 38px;
   }
 }
 
@@ -116,13 +302,15 @@
     flex-direction: column;
     align-items: flex-start;
 
+    .form-block__control {
+      @media (min-width: 768px) {
+        margin-left: 28px;
+      }
+    }
+
     @media (min-width: 768px) {
       flex-direction: row;
       align-items: center;
-
-      .form-block__control {
-        margin-left: 24px;
-      }
     }
   }
 
@@ -158,6 +346,8 @@
 
   &::after {
     background-color: #62d1ba;
+    mask-position: center;
+    mask-repeat: no-repeat;
     opacity: 0;
   }
 
@@ -169,6 +359,10 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+
+    &::after {
+      mask-image: url("../img/icon/point.svg");
+    }
 
     @media (min-width: 768px) {
       width: 50px;
@@ -189,11 +383,12 @@
     @media (min-width: 768px) {
       width: 52px;
       height: 52px;
-      margin-right: 23px;
+      margin-right: 29px;
     }
 
     &::after {
       background-color: #000000;
+      mask-image: url("../img/icon/tick.svg");
     }
   }
 }
@@ -202,6 +397,7 @@
   width: 100%;
   padding: 16px 0;
   font-family: inherit;
+  background-color: inherit;
   border: none;
   border-bottom: 2px solid #000000;
 

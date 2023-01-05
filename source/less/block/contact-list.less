@@ -1,18 +1,50 @@
 .contact-list {
-  display: grid;
+  margin: 0 0 34px;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 39px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 1150px) {
+    grid-template-columns: 1fr;
+    grid-column: 1 / 2;
+    padding-left: 175px;
+  }
 }
 
 .contact-list__block {
   display: flex;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 29px;
   font-size: 14px;
   line-height: 30px;
   color: #444444;
+
+  @media (min-width: 768px) {
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+}
+
+.contact-list__meaning {
+  margin-left: 32px;
+
+  @media (min-width: 768px) {
+    margin-left: 25px;
+  }
 }
 
 .contact-list__link {
   position: relative;
-  color: #444444;
-  text-decoration: none;
+  display: block;
   border-bottom: 1px solid #62d1ba;
+
+  @media (min-width: 1150px) {
+    padding-bottom: 6px;
+  }
 }
