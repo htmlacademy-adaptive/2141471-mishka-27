@@ -8,6 +8,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import twig from 'gulp-twig';
 import sortMediaQueries from 'postcss-sort-media-queries';
+import { stacksvg } from 'gulp-stacksvg';
 
 // Styles
 
@@ -42,6 +43,12 @@ const buildHtml = () => {
     .pipe(gulp.dest('source'));
 }
 
+const buildSprite = () => {
+  return gulp.src('source/img/icon/**/*.svg')
+    .pipe(stacksvg({ output: 'sprite' }))
+    .pipe(gulp.dest('source/img'));
+}
+
 const reload = (done) => {
   browser.reload();
   done();
@@ -67,9 +74,10 @@ const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
   gulp.watch('source/layouts/**/*.twig', gulp.series(buildHtml, reload));
+  gulp.watch('source/img/icon/**/*.svg', gulp.series(buildSprite, reload));
 }
 
 
 export default gulp.series(
-  buildHtml, styles, server, watcher
+  buildHtml, buildSprite, styles, server, watcher
 );

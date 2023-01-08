@@ -9,7 +9,11 @@
 			<ul class="catalog__list card-product">
 				<li class="card-product__item">
 					<a class="card-product__link" href="#!">
-						<img class="card-product__image" src="img/catalog/rabbit.jpg" width="260" height="195" alt="Фото вязанный зайчик.">
+						<picture>
+							<source media="(min-width: 1150px)" srcset="img/catalog/rabbit-desktop.jpg 1x, img/catalog/rabbit-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/catalog/rabbit-tablet.jpg 1x, img/catalog/rabbit-tablet@2x.jpg 2x">
+							<img class="card-product__image" src="img/catalog/rabbit.jpg" srcset="img/catalog/rabbit@2x.jpg 2x" width="260" height="195" alt="Фото вязанный зайчик.">
+						</picture>
 					</a>
 					<div class="card-product__purchase">
 						<h3 class="card-product__title">Зайчик-попрыгайчик</h3>
@@ -19,7 +23,7 @@
 							<a class="price-block__link cart" href="#!">
 								<span class="visually-hidden">Положить в корзину.</span>
 								<svg class="cart__icon" aria-hidden="true" focusable="false" width="20" height="19" xmlns="http://www.w3.org/2000/svg">
-									<use xlink:href="img/icon/cart.svg#cart"/>
+									<use xlink:href="img/sprite.svg#cart"/>
 								</svg>
 							</a>
 						</div>
@@ -27,7 +31,11 @@
 				</li>
 				<li class="card-product__item">
 					<a class="card-product__link" href="#!">
-						<img class="card-product__image" src="img/catalog/basket.jpg" width="260" height="195" alt="Фото вязанная корзина для белья.">
+						<picture>
+							<source media="(min-width: 1150px)" srcset="img/catalog/basket-desktop.jpg 1x, img/catalog/basket-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/catalog/basket-tablet.jpg 1x, img/catalog/basket-tablet@2x.jpg 2x">
+							<img class="card-product__image" src="img/catalog/basket.jpg" srcset="img/catalog/basket@2x.jpg 2x" width="260" height="195" alt="Фото вязанная корзина для белья.">
+						</picture>
 					</a>
 					<div class="card-product__purchase">
 						<h3 class="card-product__title">Корзинка для белья</h3>
@@ -37,7 +45,7 @@
 							<a class="price-block__link cart" href="#!">
 								<span class="visually-hidden">Положить в корзину.</span>
 								<svg class="cart__icon" aria-hidden="true" focusable="false" width="20" height="19" xmlns="http://www.w3.org/2000/svg">
-									<use xlink:href="img/icon/cart.svg#cart"/>
+									<use xlink:href="img/sprite.svg#cart"/>
 								</svg>
 							</a>
 						</div>
@@ -45,7 +53,11 @@
 				</li>
 				<li class="card-product__item">
 					<a class="card-product__link" href="#!">
-						<img class="card-product__image" src="img/catalog/big-basket.jpg" width="260" height="195" alt="Фото большая вязанная корзина для игрушек.">
+						<picture>
+							<source media="(min-width: 1150px)" srcset="img/catalog/big-basket-desktop.jpg 1x, img/catalog/big-basket-desktop@2x.jpg 2x">
+							<source media="(min-width: 768px)" srcset="img/catalog/big-basket-tablet.jpg 1x, img/catalog/big-basket-tablet@2x.jpg 2x">
+							<img class="card-product__image" src="img/catalog/big-basket.jpg" srcset="img/catalog/big-basket@2x.jpg 2x" width="260" height="195" alt="Фото большая вязанная корзина для игрушек.">
+						</picture>
 					</a>
 					<div class="card-product__purchase">
 						<h3 class="card-product__title">
@@ -58,7 +70,7 @@
 							<a class="price-block__link" href="#!">
 								<span class="visually-hidden">Положить в корзину.</span>
 								<svg class="price-block__icon" aria-hidden="true" focusable="false" width="20" height="19" xmlns="http://www.w3.org/2000/svg">
-									<use xlink:href="img/icon/cart.svg#cart"/>
+									<use xlink:href="img/sprite.svg#cart"/>
 								</svg>
 							</a>
 						</div>
@@ -71,7 +83,11 @@
 			<div class="product-overview">
 				<h2 class="product-overview__title">Процесс производства</h2>
 				<div class="product-overview__video">
-					<img class="product-overview__review" src="img/catalog/video-cart.jpg" width="260" height="150" alt="Видео производства.">
+					<picture>
+						<source media="(min-width: 1150px)" srcset="img/catalog/video-cart-desktop.jpg 1x, img/catalog/video-cart-desktop@2x.jpg 2x">
+						<source media="(min-width: 768px)" srcset="img/catalog/video-cart-tablet.jpg 1x, img/catalog/video-cart-tablet@2x.jpg 2x">
+						<img class="product-overview__review" src="img/catalog/video-cart.jpg" srcset="img/catalog/video-cart@2x.jpg 2x" width="260" height="150" alt="Видео производства.">
+					</picture>
 					<button class="product-overview__button video-button" type="button">
 						<span class="visually-hidden">Воспроизвести видео.</span>
 					</button>

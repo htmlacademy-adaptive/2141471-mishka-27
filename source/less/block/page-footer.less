@@ -1,23 +1,16 @@
 .page-footer {
   background-color: #f1f1f1;
-}
-
-.page-footer__wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 10px 30px;
-  width: 320px;
+  padding: 10px calc(50% - 130px);
   box-sizing: border-box;
 
   @media (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 50px 56px;
-    width: 768px;
+    padding: 50px calc(50% - 334px) 56px;
   }
 
   @media (min-width: 1150px) {
-    width: 1150px;
+    padding: 50px calc(50% - 525px) 56px;
   }
 }
