@@ -1,53 +1,51 @@
 .reviews {
   position: relative;
   display: grid;
-  padding: 17px 30px 51px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 320px;
+  padding: 17px calc(50% - 130px) 51px;
   box-sizing: border-box;
 
   &::after {
-    position: absolute;
     content: "";
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/icon/zigzag-line.svg");
+    background-image: url("../img/sprite.svg#zigzag-line");
     background-repeat: repeat-x;
+    background-size: 320px;
+
+    @media (min-width: 768px) {
+      height: 17px;
+      background-size: 772px;
+    }
+
+    @media (min-width: 1150px) {
+      right: 50px;
+      left: 50px;
+      height: 23px;
+      background-size: 1050px;
+    }
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 195px;
+    grid-template-columns: 1fr 175px;
     gap: 38px 0;
-    padding-top: 78px;
-    padding-bottom: 131px;
-    width: 768px;
+    padding: 78px calc(50% - 334px) 131px;
     background-image: url("../img/bg-review.jpg");
     background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 350px 457px;
+    background-position: top left calc(50% - 209px);
+    background-size: 350px;
 
-    &::after {
-      height: 17px;
-      background-image: url("../img/icon/zigzag-line-tablet.svg");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-review@2x.jpg");
     }
   }
 
   @media (min-width: 1150px) {
     gap: 35px 0;
-    padding-left: 205px;
-    padding-bottom: 185px;
-    width: 1150px;
-    background-position: top left 50px;
-
-    &::after {
-      left: 50px;
-      width: 1050px;
-      height: 23px;
-      background-image: url("../img/icon/zigzag-line-desktop.svg");
-    }
+    padding: 78px calc(50% - 525px) 185px;
+    background-position: top left calc(50% - 350px);
   }
 }
 
@@ -55,11 +53,13 @@
   margin: 0 0 15px;
 
   @media (min-width: 768px) {
-    margin: 3px 0 0 20px;
+    margin: 0;
+    padding-top: 3px;
   }
 
   @media (min-width: 1150px) {
-    margin-top: 0;
+    padding-top: 0;
+    padding-left: 174px;
   }
 }
 
@@ -86,6 +86,10 @@
   @media (min-width: 768px) {
     grid-column: 2 / -1;
     align-self: baseline;
-    margin-right: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: 1150px) {
+    margin-right: 0;
   }
 }

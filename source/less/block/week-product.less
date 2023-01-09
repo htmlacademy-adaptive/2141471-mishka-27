@@ -1,43 +1,38 @@
 .week-product {
   position: relative;
-  padding: 31px 30px 36px;
+  padding: 31px calc(50% - 130px) 42px;
   box-sizing: border-box;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -7px;
+    bottom: 0;
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/icon/zigzag-line.svg");
+    background-image: url("../img/sprite.svg#zigzag-line");
     background-repeat: repeat-x;
+    background-size: 320px;
   }
 
   @media (min-width: 768px) {
-    padding: 52px 50px 69px;
+    padding: 52px calc(50% - 334px) 69px;
 
     &::after {
-      bottom: 0;
       left: -2px;
-      min-width: 768px;
       height: 17px;
-      background-size: 772px 17px;
+      background-size: 772px;
     }
   }
 
   @media (min-width: 1150px) {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 61px 50px 97px;
-    width: 1150px;
-    box-sizing: border-box;
+    padding: 61px calc(50% - 525px) 96px;
 
     &::after {
+      right: 50px;
       left: 50px;
-      width: 1050px;
       height: 23px;
-      background-size: 1050px 23px;
+      background-size: 1050px;
     }
   }
 }

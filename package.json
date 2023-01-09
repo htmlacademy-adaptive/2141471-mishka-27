@@ -13,6 +13,7 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "gulp-posthtml": "3.0.5",
+    "gulp-stacksvg": "2.0.0",
     "gulp-twig": "1.2.0",
     "htmlnano": "2.0.3",
     "pineglade-bemlinter": "0.1.2",
