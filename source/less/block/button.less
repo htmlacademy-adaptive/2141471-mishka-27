@@ -3,23 +3,27 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
-  color: #444444;
+  color: @color-grey;
   background-color: inherit;
-  border: 2px solid #444444;
+  border: 2px solid @color-grey;
   text-transform: uppercase;
   cursor: pointer;
   box-sizing: border-box;
 
   &:hover {
     color: #ffffff;
-    background-color: #444444;
+    background-color: @color-grey;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   &--secondary {
     padding: 18px;
     line-height: 16px;
     color: #ffffff;
-    background-color: #63d1bb;
+    background-color: @color-green;
     border: none;
   }
 

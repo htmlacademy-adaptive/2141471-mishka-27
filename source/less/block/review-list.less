@@ -18,7 +18,7 @@
 
 .reviews-list__item {
   display: grid;
-  color: #444444;
+  color: @color-grey;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 156px;
@@ -27,12 +27,13 @@
 }
 
 .reviews-list__description {
-  margin: 0 0 32px;
+  margin: 0 0 34px;
   line-height: 30px;
 
   @media (min-width: 768px) {
     grid-column: 1 / -1;
     font-size: 17px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: 1150px) {
@@ -69,7 +70,7 @@
   font-size: 17px;
   line-height: 30px;
   font-weight: 400;
-  color: #444444;
+  color: @color-grey;
 
   @media (min-width: 768px) {
     font-size: 17px;

@@ -1,6 +1,6 @@
 .week-product {
   position: relative;
-  padding: 31px calc(50% - 130px) 42px;
+  padding: 31px @padding-mobile 42px;
   box-sizing: border-box;
 
   &::after {
@@ -10,29 +10,29 @@
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/sprite.svg#zigzag-line");
+    background-image: url("@{bg-images}/sprite.svg#zigzag-line");
     background-repeat: repeat-x;
     background-size: 320px;
-  }
 
-  @media (min-width: 768px) {
-    padding: 52px calc(50% - 334px) 69px;
-
-    &::after {
+    @media (min-width: 768px) {
       left: -2px;
       height: 17px;
       background-size: 772px;
     }
-  }
 
-  @media (min-width: 1150px) {
-    padding: 61px calc(50% - 525px) 96px;
-
-    &::after {
+    @media (min-width: 1150px) {
       right: 50px;
       left: 50px;
       height: 23px;
       background-size: 1050px;
     }
+  }
+
+  @media (min-width: 768px) {
+    padding: 52px @padding-tablet 69px;
+  }
+
+  @media (min-width: 1150px) {
+    padding: 61px @padding-desktop 96px;
   }
 }

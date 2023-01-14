@@ -66,29 +66,32 @@
 		{% endblock %}
 		<footer class="page-footer">
 			<a class="page-footer__link link-logo" href="index.html">
-				<img class="link-logo__logo" src="img/logo-footer.svg"width="102" height="34" alt="Логотип сайта интернет-магазина Мишка.">
+				<span class="visually-hidden">Главная страница интернет магазина Мишка.</span>
+				<svg class="link-logo__logo" aria-hidden="true" focusable="false" width="102" height="34" xmlns="http://www.w3.org/2000/svg">
+					<use xlink:href="img/logo-footer.svg#logo-footer"/>
+				</svg>
 			</a>
 			<ul class="page-footer__list social-list">
 				<li class="social-list__item">
-					<a class="social-list__link social" href="#!">
+					<a class="social-list__link" href="#!">
 						<span class="visually-hidden">Социальная сеть В Контакте.</span>
-						<svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22" xmlns="http://www.w3.org/2000/svg">
+						<svg class="social-list__icon" aria-hidden="true" focusable="false" width="28" height="22" xmlns="http://www.w3.org/2000/svg">
 							<use xlink:href="img/sprite.svg#vkontakte"/>
 						</svg>
 					</a>
 				</li>
 				<li class="social-list__item">
-					<a class="social-list__link social" href="#!">
+					<a class="social-list__link" href="#!">
 						<span class="visually-hidden">Социальная сеть Ютюб.</span>
-						<svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22" xmlns="http://www.w3.org/2000/svg">
+						<svg class="social-list__icon" aria-hidden="true" focusable="false" width="28" height="22" xmlns="http://www.w3.org/2000/svg">
 							<use xlink:href="img/sprite.svg#youtube"/>
 						</svg>
 					</a>
 				</li>
 				<li class="social-list__item">
-					<a class="social-list__link social" href="#!">
+					<a class="social-list__link" href="#!">
 						<span class="visually-hidden">Социальная сеть Телеграмм.</span>
-						<svg class="social__icon" aria-hidden="true" focusable="false" width="28" height="22" xmlns="http://www.w3.org/2000/svg">
+						<svg class="social-list__icon" aria-hidden="true" focusable="false" width="28" height="22" xmlns="http://www.w3.org/2000/svg">
 							<use xlink:href="img/sprite.svg#telegram"/>
 						</svg>
 					</a>
@@ -96,7 +99,7 @@
 			</ul>
 			<a class="page-footer__link link-academy" href="https://htmlacademyru/intensive/adaptive">
 				<span class="link-academy__text">Разработано</span>
-				<svg class="link-academy__icon" aria-hidden="true"focusable="false" width="27" height="35" xmlns="http://www.w3.org/2000/svg">
+				<svg class="link-academy__icon" aria-hidden="true" focusable="false" width="27" height="35" xmlns="http://www.w3.org/2000/svg">
 					<use xlink:href="img/htmlacademy.svg#htmlacademy"/>
 				</svg>
 			</a>

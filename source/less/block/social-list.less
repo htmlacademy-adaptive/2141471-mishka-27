@@ -1,7 +1,7 @@
 .social-list {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 0;
   padding: 17px 59px 25px;
   list-style-type: none;
@@ -9,5 +9,19 @@
   @media (min-width: 768px) {
     padding: 0;
     width: 142px;
+  }
+}
+
+.social-list__link {
+  &:hover {
+    .social-list__icon {
+      color: @color-green-darker;
+    }
+  }
+
+  &:active {
+    .social-list__icon {
+      color: rgba(70, 193, 174, 0.3);
+    }
   }
 }

@@ -1,15 +1,15 @@
 .contacts {
   display: grid;
-  padding: 38px calc(50% - 130px);
+  padding: 38px @padding-mobile 39px;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    padding: 38px calc(50% - 334px) 57px;
+    padding: 38px @padding-tablet 57px;
   }
 
   @media (min-width: 1150px) {
     grid-template-columns: 1fr 526px;
-    padding: 70px calc(50% - 525px) 106px;
+    padding: 70px @padding-desktop 106px;
   }
 }
 
@@ -17,31 +17,33 @@
   position: relative;
   margin: 0 0 27px;
 
-  @media (min-width: 768px) {
-    margin: 0 0 49px;
-    padding-top: 30px;
-
-    &::after {
+  &::after {
+    @media (min-width: 768px) {
       content: "";
       position: absolute;
       top: 8px;
       right: 3px;
       width: 47px;
       height: 81px;
-      background-image: url("../img/icon/flag.svg");
+      background-image: url("@{bg-images}/sprite.svg#flag");
       background-repeat: no-repeat;
     }
+
+    @media (min-width: 1150px) {
+      top: 63px;
+      left: 63px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 0 49px;
+    padding-top: 30px;
   }
 
   @media (min-width: 1150px) {
     grid-column: 1 / 2;
-    margin-bottom: 8px;
+    margin-bottom: 13px;
     padding: 80px 10px 0 175px;
-
-    &::after {
-      top: 63px;
-      left: 63px;
-    }
   }
 }
 
@@ -86,7 +88,6 @@
 
   @media (min-width: 1150px) {
     grid-column: 1 / 2;
-    align-self: start;
     margin-top: auto;
     margin-left: 175px;
   }
