@@ -1,6 +1,6 @@
 .head-title {
   margin: 0;
-  padding: 69px 30px 75px;
+  padding: 71px 30px 76px;
   font-size: 27px;
   line-height: 30px;
   font-weight: 700;
@@ -17,15 +17,16 @@
   }
 
   &--main {
-    min-height: 136px;
+    padding: 71px @padding-mobile 76px;
+    min-height: 135px;
     background-color: #f9f9f9;
-    background-image: url("../img/bg-main.jpg");
+    background-image: url("@{bg-images}/bg-main.jpg");
     background-position: center bottom -74px;
     background-repeat: no-repeat;
     background-size: 578px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-main@2x.jpg");
+      background-image: url("@{bg-images}/bg-main@2x.jpg");
     }
 
     @media (min-width: 768px) {
@@ -45,33 +46,35 @@
   &--secondary {
     background-color: #f1f1f1;
 
-    @media (min-width: 768px) {
-      position: relative;
-      min-height: 60px;
-      padding-top: 102px;
-      margin-top: -65px;
-
-      &::after {
+    &::after {
+      @media (min-width: 768px) {
         content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         height: 23px;
-        background-image: url("../img/sprite.svg#wave");
+        background-image: url("@{bg-images}/sprite.svg#wave");
         background-repeat: repeat-x;
         background-size: 770px;
       }
+
+      @media (min-width: 1150px) {
+        height: 34px;
+        background-size: 1150px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      position: relative;
+      min-height: 60px;
+      padding-top: 101px;
+      margin-top: -65px;
     }
 
     @media (min-width: 1150px) {
       min-height: 90px;
       padding-bottom: 81px;
-
-      &::after {
-        height: 34px;
-        background-size: 1150px;
-      }
     }
   }
 }

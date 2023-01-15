@@ -23,12 +23,12 @@
 
   &:hover,
   &:active {
-    background-color: #46c1ae;
+    background-color: @color-green-darker;
   }
 }
 
 .categories-list__item {
-  background-color: #63d1bb;
+  background-color: @color-green;
 
   @media (max-width: 767px) {
     &:nth-child(2n) {
@@ -45,19 +45,32 @@
 }
 
 .categories-list__link {
+  position: relative;
   display: flex;
-  margin: 0 auto;
-  padding: 23px 30px 19px;
-  width: 320px;
+  padding: 24px @padding-mobile 19px;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
-  background-color: #63d1bb;
+  background-color: @color-green;
   color: #ffffff;
   box-sizing: border-box;
 
+  &:hover {
+    top: -5px;
+
+    .categories-list__icon {
+      color: rgba(20, 144, 128, 0.7);
+    }
+  }
+
+  &:active {
+    .categories-list__icon {
+      color: rgba(20, 144, 128, 0.3);
+    }
+  }
+
   @media (min-width: 768px) {
-    padding: 25px 34px 27px 36px;
+    padding: 25px 33px 28px 36px;
     font-size: 20px;
     line-height: 30px;
     width: 100%;
@@ -73,11 +86,12 @@
 
 .categories-list__icon {
   margin-left: auto;
-  min-width: 48px;
-  color: rgba(20, 144, 128, 0.5);
+  margin-right: -4px;
+  width: 62px;
+  height: 60px;
+  color: #149080;
 
   @media (min-width: 768px) {
     padding-top: 5px;
-    min-width: 43px;
   }
 }

@@ -5,11 +5,6 @@
   border: none;
   cursor: pointer;
 
-  @media (min-width: 768px) {
-    padding-left: 0;
-    padding-right: 37px;
-  }
-
   &::after {
     position: absolute;
     content: "";
@@ -24,5 +19,20 @@
     @media (min-width: 768px) {
       content: none;
     }
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 0;
+    padding-right: 37px;
+  }
+}
+
+.arrow__icon {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }

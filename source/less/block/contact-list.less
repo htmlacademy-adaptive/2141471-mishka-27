@@ -12,6 +12,7 @@
   @media (min-width: 1150px) {
     grid-template-columns: 1fr;
     grid-column: 1 / 2;
+    gap: 5px;
     padding-left: 175px;
   }
 }
@@ -22,7 +23,7 @@
   margin-bottom: 29px;
   font-size: 14px;
   line-height: 30px;
-  color: #444444;
+  color: @color-grey;
 
   @media (min-width: 768px) {
     margin-bottom: 10px;
@@ -41,9 +42,18 @@
 .contact-list__link {
   position: relative;
   display: block;
-  border-bottom: 1px solid #62d1ba;
+  border-bottom: 1px solid @color-green-lighter;
+
+  &:hover {
+    color: @color-green-darker;
+    border-bottom: 1px solid @color-green-darker;
+  }
+
+  &:active {
+    border-bottom: 1px solid rgba(70, 193, 174, 0.1);
+  }
 
   @media (min-width: 1150px) {
-    padding-bottom: 6px;
+    padding-bottom: 4px;
   }
 }

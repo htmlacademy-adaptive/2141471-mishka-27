@@ -21,7 +21,24 @@
 .price-block__link {
   margin-left: auto;
 
+
+  &:hover {
+    .price-block__icon {
+      color: @color-green;
+    }
+  }
+
+  &:active {
+    .price-block__icon {
+      color: rgba(99, 209, 187, 0.3);
+    }
+  }
+
   @media (min-width: 1150px) {
     margin-right: 5px;
   }
+}
+
+.price-block__icon {
+  color: rgba(0, 0, 0, 0.2);
 }

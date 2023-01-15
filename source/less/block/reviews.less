@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   display: grid;
-  padding: 17px calc(50% - 130px) 51px;
+  padding: 17px @padding-mobile 51px;
   box-sizing: border-box;
 
   &::after {
@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/sprite.svg#zigzag-line");
+    background-image: url("@{bg-images}/sprite.svg#zigzag-line");
     background-repeat: repeat-x;
     background-size: 320px;
 
@@ -31,26 +31,26 @@
   @media (min-width: 768px) {
     grid-template-columns: 1fr 175px;
     gap: 38px 0;
-    padding: 78px calc(50% - 334px) 131px;
-    background-image: url("../img/bg-review.jpg");
+    padding: 78px @padding-tablet 131px;
+    background-image: url("@{bg-images}/bg-review.jpg");
     background-repeat: no-repeat;
     background-position: top left calc(50% - 209px);
     background-size: 350px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/bg-review@2x.jpg");
+      background-image: url("@{bg-images}/bg-review@2x.jpg");
     }
   }
 
   @media (min-width: 1150px) {
-    gap: 35px 0;
-    padding: 78px calc(50% - 525px) 185px;
+    gap: 34px 0;
+    padding: 79px @padding-desktop 184px;
     background-position: top left calc(50% - 350px);
   }
 }
 
 .reviews__title {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
 
   @media (min-width: 768px) {
     margin: 0;
@@ -64,29 +64,31 @@
 }
 
 .reviews__link {
+  grid-column: 1 / -1;
   display: block;
-  padding: 3px 0;
-  font-size: 17px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #444444;
+  padding: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @color-grey;
   text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid @color-grey;
 
-  &--write {
-    grid-column: 1 / -1;
-    padding: 14px;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    border: 2px solid #444444;
+  &:hover {
+    color: #ffffff;
+    background-color: @color-grey;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   @media (min-width: 768px) {
     grid-column: 2 / -1;
     align-self: baseline;
-    margin: 0;
+    font-size: 17px;
   }
 
   @media (min-width: 1150px) {
