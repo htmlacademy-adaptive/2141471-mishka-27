@@ -32,14 +32,9 @@
     grid-template-columns: 1fr 175px;
     gap: 38px 0;
     padding: 78px @padding-tablet 131px;
-    background-image: url("@{bg-images}/bg-review.jpg");
-    background-repeat: no-repeat;
     background-position: top left calc(50% - 209px);
     background-size: 350px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("@{bg-images}/bg-review@2x.jpg");
-    }
+    .background("bg-review");
   }
 
   @media (min-width: 1150px) {

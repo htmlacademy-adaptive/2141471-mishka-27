@@ -1,3 +1,1 @@
-<svg id="menuclose" width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path d="M21 1.37 19.57 0l-9.02 8.59L1.43 0 0 1.37l9.01 8.68L0 18.63 1.43 20l9.12-8.59L19.57 20 21 18.63l-9.01-8.58L21 1.37Z"/>
-</svg>
+<svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 1.366L19.566 0 10.55 8.585 1.434 0 0 1.366l9.015 8.683L0 18.634 1.434 20l9.117-8.585L19.566 20 21 18.634l-9.015-8.585L21 1.366z" fill="#000"/></svg>

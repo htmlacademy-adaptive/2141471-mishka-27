@@ -1,39 +1,39 @@
-import gulp from 'gulp';
-import { deleteSync as clean } from 'del';
-import getData from 'gulp-data';
-import plumber from 'gulp-plumber';
-import less from 'gulp-less';
-import postcss from 'gulp-postcss';
-import minifyCss from 'postcss-csso';
-import rename from 'gulp-rename';
-import posthtml from 'gulp-posthtml';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
-import minifyJs from 'gulp-terser';
-import twig from 'gulp-twig';
-import sortMediaQueries from 'postcss-sort-media-queries';
-import { stacksvg } from 'gulp-stacksvg';
-import svgo from 'gulp-svgo';
 import createWebp from 'gulp-webp';
+import { deleteAsync } from 'del';
+import getData from 'gulp-data';
+import gulp from 'gulp';
+import less from 'gulp-less';
+import minifyCss from 'postcss-csso';
+import minifyJs from 'gulp-terser';
 import optimizeImages from 'gulp-imagemin';
 import optimizeJpeg from 'imagemin-mozjpeg';
 import optimizePng from 'imagemin-pngquant';
 import optimizeSvg from 'imagemin-svgo';
+import postcss from 'gulp-postcss';
+import posthtml from 'gulp-posthtml';
+import rename from 'gulp-rename';
+import sortMediaQueries from 'postcss-sort-media-queries';
+import { stacksvg } from 'gulp-stacksvg';
 import svgoConfig from './svgo.config.js';
+import twig from 'gulp-twig';
 import useCondition from 'gulp-if';
 
+const isDev = process.argv.includes('--dev');
 
 // Styles
 
-export const styles = () => {
-  return gulp.src('source/less/style.less', { sourcemaps: true })
-    .pipe(plumber())
+const postcssPlugins = [sortMediaQueries(), autoprefixer()];
+if (!isDev) {
+  postcssPlugins.push(minifyCss());
+}
+
+export const buildStyles = () => {
+  return gulp
+    .src('source/less/style.less', { sourcemaps: true })
     .pipe(less())
-    .pipe(postcss([
-      sortMediaQueries(),
-      autoprefixer(),
-      minifyCss()
-    ]))
+    .pipe(postcss(postcssPlugins))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
@@ -63,19 +63,18 @@ const buildHtml = () => {
 // Scripts
 
 const buildScripts = () => {
-  return gulp.src('source/js/*.js')
-    .pipe(minifyJs())
+  return gulp
+    .src('source/js/*.js')
+    .pipe(useCondition(!isDev, minifyJs()))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/js'));
 }
 
 // Images
 
-const isDev = process.argv.includes('--dev');
-
 const buildImages = () => {
   return gulp
-    .src('source/img/**/*.{jpg,png,svg}')
+    .src(['source/img/**/*.{jpg,png,svg}', '!source/img/icons/**'])
     .pipe(
       useCondition(
         isDev,
@@ -94,38 +93,22 @@ const buildImages = () => {
 // Sprite
 
 const buildSprite = () => {
-  return gulp.src('source/img/icon/**/*.svg')
+  return gulp
+    .src('source/img/icon/**/*.svg')
+    .pipe(useCondition(!isDev, optimizeImages([optimizeSvg(svgoConfig)])))
     .pipe(stacksvg({ output: 'sprite' }))
-    .pipe(gulp.dest('build/img'));
-}
-
-// SVG
-
-const buildSvgo = () => {
-  return gulp.src('source/img/*.svg')
-    .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
 // Copy
 
-const buildCopy = (done) => {
-  gulp.src([
-    'source/static',
-    'source/*.{ico,manifest}',
-  ], {
-    base: 'source'
-  })
-  .pipe(gulp.dest('build'))
-  done();
-}
+const copy = () => gulp.src('source/static/**').pipe(gulp.dest('build'));
 
 // Delete
 
-const buildDelete = (done) => {
-  clean('build');
-  done();
-}
+const clean = () => deleteAsync('build');
+
+// Reload
 
 const reload = (done) => {
   browser.reload();
@@ -134,42 +117,37 @@ const reload = (done) => {
 
 // Server
 
-const server = (done) => {
+const server = () => {
   browser.init({
-    server: {
-      baseDir: 'source'
-    },
+    server: "build",
     cors: true,
     notify: false,
     ui: false,
   });
-  done();
-}
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
-  gulp.watch('source/layouts/**/*.twig', gulp.series(buildHtml, reload));
-  gulp.watch('source/img/icon/**/*.svg', gulp.series(buildSprite, reload));
-}
+  gulp.watch("source/layouts/**/*.twig", gulp.series(buildHtml, reload));
+  gulp.watch("source/less/**/*.less", buildStyles);
+  gulp.watch("source/js/**/*.js", buildScripts);
+  gulp.watch(
+    ["source/img/**/*.{jpg,png,svg}", "!source/img/icons/**"],
+    gulp.series(buildImages, reload)
+  );
+  gulp.watch("source/img/icon/**/*.svg", gulp.series(buildSprite, reload));
+  gulp.watch("source/static/**", gulp.series(copy, reload));
+};
 
 // Build
 
-export const build = gulp.series(
-  buildDelete,
-  buildCopy,
-  buildImages,
+const build = gulp.series(
+  clean,
   gulp.parallel(
-    styles,
     buildHtml,
+    buildImages,
     buildScripts,
     buildSprite,
-    buildSvgo
-  ),
+    buildStyles,
+    copy
+  )
 );
 
-export default gulp.series(
-  buildHtml, buildSprite, styles, server, watcher
-);
+export default isDev ? gulp.series(build, server) : build;

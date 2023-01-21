@@ -12,9 +12,14 @@ togglerElement.addEventListener('click', () => {
   togglerElement.classList.toggle('main-navigation__toggle--opened');
 });
 
-const shoosebuttonElement = document.querySelector('.product-card__button');
-const modalElement = document.querySelector('.modal');
+/* Modal */
+const modalElement = document.querySelector(".modal");
+const modalOpeners = document.querySelectorAll(
+  ".product-card__button, .price-block__link"
+);
 
-shoosebuttonElement.addEventListener('click', () => {
-  modalElement.classList.toggle('hidden');
+modalOpeners.forEach((opener) => {
+  opener.addEventListener("click", () => {
+    modalElement.classList.toggle("hidden");
+  });
 });

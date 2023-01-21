@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>HTML Academy: Мишка</title>
 		<link rel="stylesheet" href="css/style.min.css">
-		<link rel="icon" href="favicon.ico">
-		<link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
-		<link rel="manifest" href="manifest.webmanifest">
+		<link rel="icon" href="static/favicon.ico">
+		<link rel="icon" href="static/favicon32.svg" type="image/svg+xml">
+		<link rel="manifest" href="static/manifest.webmanifest">
 	</head>
 	<body class="page__body">
 		<header class="main-header {{ page == 'index' ? 'main-header--light' }}">
@@ -127,12 +127,12 @@
 			</div>
 		{% endblock %}
 
-		<script>
-			window.pixelperfect = {
-breakpoints: [320, 768, 1150]
-};
-		</script>
-		<script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"></script>
-		<script src="js/script.js"></script>
+		{% if isDev %}
+			<script>
+				window.pixelperfect = { breakpoints: [320, 768, 1150] };
+			</script>
+			<script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"></script>
+		{% endif %}
+		<script src="js/script.min.js"></script>
 	</body>
 </html>
