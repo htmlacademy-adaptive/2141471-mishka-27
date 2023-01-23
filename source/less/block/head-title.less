@@ -20,14 +20,8 @@
     padding: 71px @padding-mobile 76px;
     min-height: 135px;
     background-color: #f9f9f9;
-    background-image: url("@{bg-images}/bg-main.jpg");
-    background-position: center bottom -74px;
-    background-repeat: no-repeat;
     background-size: 578px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("@{bg-images}/bg-main@2x.jpg");
-    }
+    .background("bg-main");
 
     @media (min-width: 768px) {
       min-height: 441px;
