@@ -74,7 +74,7 @@ const buildScripts = () => {
 
 const buildImages = () => {
   return gulp
-    .src(['source/img/**/*.{jpg,png,svg}', '!source/img/icons/**'])
+    .src(['source/img/**/*.{jpg,png,svg}', '!source/img/icon/**'])
     .pipe(
       useCondition(
         isDev,
@@ -129,7 +129,7 @@ const server = () => {
   gulp.watch("source/less/**/*.less", buildStyles);
   gulp.watch("source/js/**/*.js", buildScripts);
   gulp.watch(
-    ["source/img/**/*.{jpg,png,svg}", "!source/img/icons/**"],
+    ["source/img/**/*.{jpg,png,svg}", "!source/img/icon/**"],
     gulp.series(buildImages, reload)
   );
   gulp.watch("source/img/icon/**/*.svg", gulp.series(buildSprite, reload));
