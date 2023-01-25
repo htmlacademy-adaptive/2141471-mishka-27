@@ -2,6 +2,8 @@
   position: relative;
 
   @media (max-width: 767px) {
+    background-color: #ffffff;
+
     &--closed {
       display: none;
     }
@@ -46,6 +48,8 @@
   line-height: 24px;
   font-weight: 700;
 
+
+
   @media (min-width: 768px) {
     padding: 32px 25px 31px 31px;
   }
@@ -62,6 +66,17 @@
     .user-list__icon {
       color: rgba(99, 209, 187, 1);
       opacity: 1;
+    }
+  }
+
+  &:active {
+    .user-list__text {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    .user-list__icon {
+      color: rgba(99, 209, 187, 0.3);
+      opacity: 0.3;
     }
   }
 

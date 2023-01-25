@@ -1,6 +1,10 @@
+const mainnavElement = document.querySelector('.main-navigation');
 const pagelistElement = document.querySelector('.page-list');
 const userlistElement = document.querySelector('.user-list');
 const togglerElement = document.querySelector('.main-navigation__toggle');
+const pagemainElement = document.querySelector('.page__main');
+mainnavElement.classList.remove('main-navigation--nojs');
+pagemainElement.classList.remove('page__main--nojs');
 pagelistElement.classList.add('page-list--closed', 'page-list--opened');
 userlistElement.classList.add('user-list--closed', 'user-list--opened');
 togglerElement.classList.add('main-navigation__toggle--closed');

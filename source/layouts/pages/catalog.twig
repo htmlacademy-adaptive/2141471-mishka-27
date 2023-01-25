@@ -1,7 +1,7 @@
 {% extends "../main.twig" %}
 
 {% block main %}
-	<main class="page__main">
+	<main class="page__main page__main--nojs">
 		<h1 class="head-title head-title--secondary">Каталог товаров</h1>
 
 		<section class="catalog">
@@ -10,6 +10,9 @@
 				<li class="card-product__item">
 					<a class="card-product__link" href="#!">
 						<picture>
+							<source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/rabbit-desktop.webp, img/catalog/rabbit-desktop@2x.webp 2x">
+							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/rabbit-tablet.webp, img/catalog/rabbit-tablet@2x.webp 2x">
+							<source type="image/webp" srcset="img/catalog/rabbit.webp, img/catalog/rabbit@2x.webp 2x">
 							<source media="(min-width: 1150px)" srcset="img/catalog/rabbit-desktop.jpg 1x, img/catalog/rabbit-desktop@2x.jpg 2x">
 							<source media="(min-width: 768px)" srcset="img/catalog/rabbit-tablet.jpg 1x, img/catalog/rabbit-tablet@2x.jpg 2x">
 							<img class="card-product__image" src="img/catalog/rabbit.jpg" srcset="img/catalog/rabbit@2x.jpg 2x" width="260" height="195" alt="Фото вязанный зайчик.">
@@ -32,6 +35,9 @@
 				<li class="card-product__item">
 					<a class="card-product__link" href="#!">
 						<picture>
+							<source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/basket-desktop.webp, img/catalog/basket-desktop@2x.webp 2x">
+							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/basket-tablet.webp, img/catalog/basket-tablet@2x.webp 2x">
+							<source type="image/webp" srcset="img/catalog/basket.webp, img/catalog/basket@2x.webp 2x">
 							<source media="(min-width: 1150px)" srcset="img/catalog/basket-desktop.jpg 1x, img/catalog/basket-desktop@2x.jpg 2x">
 							<source media="(min-width: 768px)" srcset="img/catalog/basket-tablet.jpg 1x, img/catalog/basket-tablet@2x.jpg 2x">
 							<img class="card-product__image" src="img/catalog/basket.jpg" srcset="img/catalog/basket@2x.jpg 2x" width="260" height="195" alt="Фото вязанная корзина для белья.">
@@ -54,6 +60,9 @@
 				<li class="card-product__item">
 					<a class="card-product__link" href="#!">
 						<picture>
+							<source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/big-basket-desktop.webp, img/catalog/big-basket-desktop@2x.webp 2x">
+							<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/big-basket-tablet.webp, img/catalog/big-basket-tablet@2x.webp 2x">
+							<source type="image/webp" srcset="img/catalog/big-basket.webp, img/catalog/big-basket@2x.webp 2x">
 							<source media="(min-width: 1150px)" srcset="img/catalog/big-basket-desktop.jpg 1x, img/catalog/big-basket-desktop@2x.jpg 2x">
 							<source media="(min-width: 768px)" srcset="img/catalog/big-basket-tablet.jpg 1x, img/catalog/big-basket-tablet@2x.jpg 2x">
 							<img class="card-product__image" src="img/catalog/big-basket.jpg" srcset="img/catalog/big-basket@2x.jpg 2x" width="260" height="195" alt="Фото большая вязанная корзина для игрушек.">
@@ -84,6 +93,9 @@
 				<h2 class="product-overview__title">Процесс производства</h2>
 				<div class="product-overview__video">
 					<picture>
+						<source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/video-cart-desktop.webp, img/catalog/video-cart-desktop@2x.webp 2x">
+						<source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/video-cart-tablet.webp, img/catalog/video-cart-tablet@2x.webp 2x">
+						<source type="image/webp" srcset="img/catalog/video-cart.webp, img/catalog/video-cart@2x.webp 2x">
 						<source media="(min-width: 1150px)" srcset="img/catalog/video-cart-desktop.jpg 1x, img/catalog/video-cart-desktop@2x.jpg 2x">
 						<source media="(min-width: 768px)" srcset="img/catalog/video-cart-tablet.jpg 1x, img/catalog/video-cart-tablet@2x.jpg 2x">
 						<img class="product-overview__review" src="img/catalog/video-cart.jpg" srcset="img/catalog/video-cart@2x.jpg 2x" width="260" height="150" alt="Видео производства.">
