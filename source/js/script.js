@@ -27,3 +27,43 @@ modalOpeners.forEach((opener) => {
     modalElement.classList.toggle("hidden");
   });
 });
+
+const mapElement = document.querySelector('#map');
+
+if (mapElement) {
+  const scriptElement = document.createElement('script');
+  scriptElement.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+
+  scriptElement.addEventListener('load', () => {
+    if (typeof ymaps !== 'undefined') {
+      ymaps.ready(() => {
+        const map = new ymaps.Map('map', { center: [59.9387165, 30.3230474], controls: [], zoom: 17 });
+
+        map.geoObjects.add(
+          new ymaps.Placemark(
+            map.getCenter(),
+            { hintContent: 'г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101' },
+            {
+              iconImageHref: 'img/sprite.svg#map-pin',
+              iconImageOffset: [-22, -82],
+              iconImageSize: [67, 100],
+              iconLayout: 'default#image',
+              iconShadow: !1
+            }
+          )
+        );
+        map.behaviors.disable('scrollZoom');
+
+        const ymapsElements = mapElement.querySelectorAll('ymaps[class$="-map"]');
+        window.addEventListener('resize', () => {
+          ymapsElements.forEach((ymapElement) => {
+            ymapElement.style.width = `${document.body.clientWidth}px`;
+          });
+        });
+
+        mapElement.classList.add('contacts__map--ready');
+      });
+    }
+  });
+  document.body.append(scriptElement);
+}

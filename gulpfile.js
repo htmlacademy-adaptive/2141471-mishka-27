@@ -51,6 +51,7 @@ const buildHtml = () => {
           .replace(/\\/g, "/");
 
         return {
+          isDev,
           page,
         };
       })
@@ -119,7 +120,7 @@ const reload = (done) => {
 
 const server = () => {
   browser.init({
-    server: "build",
+    server: ["build", "source/pixelperfect"],
     cors: true,
     notify: false,
     ui: false,
