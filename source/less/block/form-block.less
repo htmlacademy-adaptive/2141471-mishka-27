@@ -107,13 +107,13 @@
   }
 
   &--phone {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
 
     .form-block__name {
       margin-bottom: 5px;
 
       @media (min-width: 768px) {
-        margin-top: 14px;
+        margin-top: 16px;
         margin-bottom: 0;
       }
     }
@@ -124,7 +124,7 @@
       box-sizing: border-box;
 
       @media (min-width: 768px) {
-        padding: 14px 17px 18px;
+        padding: 10px 18px 14px;
       }
     }
 
@@ -148,7 +148,7 @@
 
     @media (min-width: 1150px) {
       grid-template-columns: 157px 702px;
-      gap: 15px;
+      gap: 17px;
       padding: 50px @padding-desktop 12px;
     }
   }
@@ -165,7 +165,7 @@
       }
 
       @media (min-width: 1150px) {
-        margin-left: 59px;
+        margin-left: 62px;
       }
     }
 
@@ -179,7 +179,7 @@
       box-sizing: border-box;
 
       @media (min-width: 768px) {
-        padding: 14px 17px 18px;
+        padding: 11px 17px 13px;
       }
     }
 
@@ -189,7 +189,7 @@
       }
 
       @media (min-width: 1150px) {
-        width: 36px;
+        width: 44px;
       }
     }
 
@@ -200,8 +200,8 @@
     }
 
     @media (min-width: 1150px) {
-      grid-template-columns: 159px 702px;
-      gap: 15px;
+      grid-template-columns: 159px 700px;
+      gap: 16px;
       padding: 12px @padding-desktop 50px;
     }
   }
@@ -211,7 +211,7 @@
 
     .form-block__name {
       padding: 0;
-      margin-bottom: 22px;
+      margin-bottom: 21px;
     }
 
     .form-block__control {
@@ -239,7 +239,7 @@
       padding-bottom: 49px;
 
       .form-block__name {
-        margin-left: 59px;
+        margin-left: 62px;
       }
     }
   }
@@ -301,7 +301,7 @@
   }
 
   @media (min-width: 1150px) {
-    width: 38px;
+    width: 45px;
   }
 }
 
@@ -324,7 +324,7 @@
 
     .form-block__control {
       @media (min-width: 768px) {
-        margin-left: 28px;
+        margin-left: 25px;
       }
     }
 
@@ -346,7 +346,6 @@
   color: inherit;
   border: 2px solid @color-grey;
   appearance: none;
-  outline-offset: inherit;
 
   &:hover {
     border-color: @color-green-lighter;
@@ -434,9 +433,12 @@
 
 .form-block__control {
   width: 100%;
-  padding: 16px 0;
+  padding: 12px 0;
   font-family: inherit;
+  font-size: 19px;
+  line-height: 18px;
   background-color: inherit;
+  color: #444444;
   border: none;
   border-bottom: 2px solid #000000;
 
@@ -454,22 +456,11 @@
   }
 
   @media (min-width: 768px) {
-    padding: 16px 17px;
+    padding: 12px 17px;
   }
 
   &::placeholder {
-    font-family: inherit;
-    font-size: 17px;
-    line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
-
-    &:active {
-      color: @color-grey;
-    }
-
-    @media (min-width: 768px) {
-      font-size: 19px;
-      line-height: 18px;
-    }
+    opacity: 1;
   }
 }

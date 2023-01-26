@@ -13,7 +13,7 @@
 	</head>
 	<body class="page__body">
 		<header class="main-header {{ page == 'index' ? 'main-header--light' }}">
-			<nav class="main-navigation">
+			<nav class="main-navigation main-navigation--nojs">
 				<a class="main-navigation__logo" {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }}>
 					<picture>
 						<source media="(min-width: 1150px)" srcset="img/logo-mishka-desktop.svg">
@@ -131,7 +131,7 @@
 
 		{% if isDev %}
 			<script>
-				window.pixelperfect = { breakpoints: [320, 768, 1150] };
+				window.pixelperfect = { breakpoints: [320, 768, 1150], folder: '' };
 			</script>
 			<script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"></script>
 		{% endif %}

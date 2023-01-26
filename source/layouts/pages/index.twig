@@ -1,7 +1,7 @@
 {% extends "../main.twig" %}
 
 {% block main %}
-	<main class="page__main main-container">
+	<main class="page__main page__main--nojs main-container">
 		<h1 class="head-title head-title--main">
 			Милые штуки ручной<br>
 			работы для дома
@@ -144,7 +144,8 @@
 					</dd>
 				</div>
 			</dl>
-			<div class="contacts__map"></div>
+			<div class="contacts__map" id="map">
+			</div>
 			<button class="contacts__button button" type="button">Напишите нам</button>
 		</section>
 	</main>

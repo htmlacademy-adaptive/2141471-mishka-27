@@ -53,9 +53,12 @@
   margin-left: -30px;
   width: calc(100% + 60px);
   height: 454px;
-  background-image: url("@{bg-images}/map.png");
   background-repeat: no-repeat;
   background-position: top center;
+
+  &--ready {
+    background-image: none;
+  }
 
   @media (min-width: 768px) {
     margin-right: -50px;

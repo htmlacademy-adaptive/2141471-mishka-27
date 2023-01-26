@@ -2,6 +2,8 @@
   position: relative;
 
   @media (max-width: 767px) {
+    background-color: #ffffff;
+
     &--closed {
       display: none;
     }
@@ -65,6 +67,17 @@
     }
   }
 
+  &:active {
+    .user-list__text {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    .user-list__icon {
+      color: rgba(99, 209, 187, 0.3);
+      opacity: 0.3;
+    }
+  }
+
   &--icon {
     .user-list__icon {
       margin-right: 28px;
@@ -78,7 +91,7 @@
       }
 
       .user-list__text {
-        display: none;
+        .visually-hidden();
       }
     }
 
